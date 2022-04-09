@@ -1,0 +1,1036 @@
+2020-10-18 11:36:32.197  INFO 8352 --- [restartedMain] com.stone.blog.BlogApplication           : Starting BlogApplication on DESKTOP-49V0C56 with PID 8352 (E:\Blog\target\classes started by 18883 in E:\Blog)
+2020-10-18 11:36:32.197 DEBUG 8352 --- [restartedMain] com.stone.blog.BlogApplication           : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-10-18 11:36:32.213  INFO 8352 --- [restartedMain] com.stone.blog.BlogApplication           : The following profiles are active: dev
+2020-10-18 11:36:32.244  INFO 8352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-18 11:36:32.244  INFO 8352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-18 11:36:33.457  INFO 8352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-18 11:36:33.535  INFO 8352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 5 JPA repository interfaces.
+2020-10-18 11:36:34.216  INFO 8352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-18 11:36:34.231  INFO 8352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-18 11:36:34.231  INFO 8352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-10-18 11:36:34.321  INFO 8352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-18 11:36:34.321  INFO 8352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2077 ms
+2020-10-18 11:36:34.513  INFO 8352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-18 11:36:34.568  INFO 8352 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-18 11:36:34.612  INFO 8352 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-10-18 11:36:34.705  WARN 8352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-18 11:36:34.758  INFO 8352 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-18 11:36:34.842  INFO 8352 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-18 11:36:35.048  INFO 8352 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-18 11:36:35.220  INFO 8352 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-18 11:36:35.236  INFO 8352 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-18 11:36:35.536  INFO 8352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-18 11:36:35.596  INFO 8352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2020-10-18 11:36:35.596  INFO 8352 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-18 11:36:35.945  INFO 8352 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-18 11:36:35.960  INFO 8352 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-18 11:36:36.456  INFO 8352 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-18 11:36:36.466  INFO 8352 --- [restartedMain] com.stone.blog.BlogApplication           : Started BlogApplication in 4.738 seconds (JVM running for 5.966)
+2020-10-18 11:36:49.103  INFO 8352 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-18 11:36:49.103  INFO 8352 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-18 11:36:49.115  INFO 8352 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-10-18 11:36:49.226  INFO 8352 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@44d18174]}
+2020-10-18 11:36:49.246  WARN 8352 --- [http-nio-8083-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-10-18 11:36:49.322  WARN 8352 --- [http-nio-8083-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-10-18 11:36:49.392  INFO 8352 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 11:36:49.392  INFO 8352 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 11:36:49.815  INFO 8352 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/;jsessionid=9D31E5FD756135B7FE73EB6A6E42358D', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@44d18174]}
+2020-10-18 11:36:49.838  INFO 8352 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 11:36:49.838  INFO 8352 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 11:36:50.318  INFO 8352 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 11:36:50.327  INFO 8352 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 11:36:50.327  INFO 8352 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 11:51:54.922  WARN 8352 --- [http-nio-8083-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1364, SQLState: HY000
+2020-10-18 11:51:54.922 ERROR 8352 --- [http-nio-8083-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : Field 'publication' doesn't have a default value
+2020-10-18 11:51:54.933 ERROR 8352 --- [http-nio-8083-exec-4] c.s.b.h.ControllerExceptionHandler       : Request URL : http://localhost:8083/admin/blogs, Exception : {}
+
+org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:353)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:255)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:538)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:633)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:386)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.stone.blog.service.BlogServiceImpl$$EnhancerBySpringCGLIB$$f92b70f6.saveBlog(<generated>)
+	at com.stone.blog.web.admin.BlogController.postBlogs(BlogController.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3255)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3782)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:348)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:102)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1363)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:454)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3213)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2381)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	... 60 common frames omitted
+Caused by: java.sql.SQLException: Field 'publication' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 80 common frames omitted
+
+2020-10-18 11:51:54.934  WARN 8352 --- [http-nio-8083-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement]
+2020-10-18 11:52:08.057  WARN 8352 --- [http-nio-8083-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1364, SQLState: HY000
+2020-10-18 11:52:08.058 ERROR 8352 --- [http-nio-8083-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : Field 'publication' doesn't have a default value
+2020-10-18 11:52:08.059 ERROR 8352 --- [http-nio-8083-exec-2] c.s.b.h.ControllerExceptionHandler       : Request URL : http://localhost:8083/admin/blogs, Exception : {}
+
+org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:353)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:255)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:538)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:633)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:386)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.stone.blog.service.BlogServiceImpl$$EnhancerBySpringCGLIB$$f92b70f6.saveBlog(<generated>)
+	at com.stone.blog.web.admin.BlogController.postBlogs(BlogController.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3255)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3782)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:348)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:102)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1363)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:454)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3213)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2381)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	... 60 common frames omitted
+Caused by: java.sql.SQLException: Field 'publication' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 80 common frames omitted
+
+2020-10-18 11:52:08.060  WARN 8352 --- [http-nio-8083-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement]
+2020-10-18 11:53:15.417  WARN 8352 --- [http-nio-8083-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1364, SQLState: HY000
+2020-10-18 11:53:15.417 ERROR 8352 --- [http-nio-8083-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : Field 'publication' doesn't have a default value
+2020-10-18 11:53:15.419 ERROR 8352 --- [http-nio-8083-exec-7] c.s.b.h.ControllerExceptionHandler       : Request URL : http://localhost:8083/admin/blogs, Exception : {}
+
+org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:353)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:255)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:538)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:633)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:386)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.stone.blog.service.BlogServiceImpl$$EnhancerBySpringCGLIB$$f92b70f6.saveBlog(<generated>)
+	at com.stone.blog.web.admin.BlogController.postBlogs(BlogController.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3255)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3782)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:348)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:102)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1363)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:454)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3213)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2381)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	... 60 common frames omitted
+Caused by: java.sql.SQLException: Field 'publication' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 80 common frames omitted
+
+2020-10-18 11:53:15.420  WARN 8352 --- [http-nio-8083-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement]
+2020-10-18 11:53:35.548  WARN 8352 --- [http-nio-8083-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1364, SQLState: HY000
+2020-10-18 11:53:35.548 ERROR 8352 --- [http-nio-8083-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Field 'publication' doesn't have a default value
+2020-10-18 11:53:35.549 ERROR 8352 --- [http-nio-8083-exec-1] c.s.b.h.ControllerExceptionHandler       : Request URL : http://localhost:8083/admin/blogs, Exception : {}
+
+org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:353)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:255)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:538)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:633)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:386)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.stone.blog.service.BlogServiceImpl$$EnhancerBySpringCGLIB$$f92b70f6.saveBlog(<generated>)
+	at com.stone.blog.web.admin.BlogController.postBlogs(BlogController.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3255)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3782)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:348)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:102)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1363)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:454)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3213)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2381)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	... 60 common frames omitted
+Caused by: java.sql.SQLException: Field 'publication' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 80 common frames omitted
+
+2020-10-18 11:53:35.550  WARN 8352 --- [http-nio-8083-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement]
+2020-10-18 12:05:46.031  INFO 9628 --- [restartedMain] com.stone.blog.BlogApplication           : Starting BlogApplication on DESKTOP-49V0C56 with PID 9628 (E:\Blog\target\classes started by 18883 in E:\Blog)
+2020-10-18 12:05:46.031 DEBUG 9628 --- [restartedMain] com.stone.blog.BlogApplication           : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-10-18 12:05:46.031  INFO 9628 --- [restartedMain] com.stone.blog.BlogApplication           : The following profiles are active: dev
+2020-10-18 12:05:46.062  INFO 9628 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-18 12:05:46.062  INFO 9628 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-18 12:05:46.546  INFO 9628 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-18 12:05:46.593  INFO 9628 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 5 JPA repository interfaces.
+2020-10-18 12:05:47.189  INFO 9628 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-18 12:05:47.189  INFO 9628 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-18 12:05:47.189  INFO 9628 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-10-18 12:05:47.267  INFO 9628 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-18 12:05:47.267  INFO 9628 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1205 ms
+2020-10-18 12:05:47.424  INFO 9628 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-18 12:05:47.470  INFO 9628 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-18 12:05:47.502  INFO 9628 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-10-18 12:05:47.627  INFO 9628 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-18 12:05:47.642  WARN 9628 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-18 12:05:47.705  INFO 9628 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-18 12:05:47.939  INFO 9628 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-18 12:05:47.986  INFO 9628 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-18 12:05:48.002  INFO 9628 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-18 12:05:48.299  INFO 9628 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-18 12:05:48.377  INFO 9628 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2020-10-18 12:05:48.377  INFO 9628 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-18 12:05:48.720  INFO 9628 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-18 12:05:48.736  INFO 9628 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-18 12:05:49.113  INFO 9628 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-18 12:05:49.129  INFO 9628 --- [restartedMain] com.stone.blog.BlogApplication           : Started BlogApplication in 3.46 seconds (JVM running for 4.283)
+2020-10-18 12:05:55.014  INFO 9628 --- [http-nio-8083-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-18 12:05:55.014  INFO 9628 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-18 12:05:55.022  INFO 9628 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-10-18 12:06:17.016  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:06:17.033  WARN 9628 --- [http-nio-8083-exec-8] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-10-18 12:06:17.062  WARN 9628 --- [http-nio-8083-exec-8] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-10-18 12:06:17.093  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:06:17.093  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:06:17.778  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:06:17.787  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:06:17.788  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:08:05.026  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:08:05.043  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:08:05.043  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:08:05.444  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:08:05.450  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:08:05.450  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:08:10.863  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[255, {}]}
+2020-10-18 12:08:10.893  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:08:10.893  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:08:11.244  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:08:11.250  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:08:11.251  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:08:11.346  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 255, {}]}
+2020-10-18 12:08:11.388  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-18 12:08:11.389  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:13.185  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:09:13.198  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:09:13.198  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:13.561  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:09:13.572  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:09:13.573  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:15.680  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:09:15.696  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:09:15.697  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:16.042  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:09:16.049  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:09:16.049  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:27.642  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/about', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.AboutShowController.about', args=[]}
+2020-10-18 12:09:27.644  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: about
+2020-10-18 12:09:27.645  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:27.930  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:09:27.936  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:09:27.936  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:44.402  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2020-10-18 12:09:44.413  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:09:44.414  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:44.716  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:09:44.721  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:09:44.721  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:46.888  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/215', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], 215, {}]}
+2020-10-18 12:09:46.896  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:09:46.896  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:47.184  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:09:47.191  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:09:47.192  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:47.576  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/56', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], 56, {}]}
+2020-10-18 12:09:47.585  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:09:47.585  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:47.871  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:09:47.876  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:09:47.876  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:49.263  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/64', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], 64, {}]}
+2020-10-18 12:09:49.268  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:09:49.269  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:49.541  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:09:49.546  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:09:49.546  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:51.134  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/56', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], 56, {}]}
+2020-10-18 12:09:51.143  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:09:51.143  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:51.432  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:09:51.436  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:09:51.436  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:51.680  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/215', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], 215, {}]}
+2020-10-18 12:09:51.688  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:09:51.688  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:51.991  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:09:51.996  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:09:51.996  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:52.718  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.ArchiveShowController.archives', args=[{}]}
+2020-10-18 12:09:52.736  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: archives
+2020-10-18 12:09:52.736  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:09:52.998  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:09:53.006  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:09:53.006  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:15.200  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/about', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.AboutShowController.about', args=[]}
+2020-10-18 12:10:15.200  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: about
+2020-10-18 12:10:15.200  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:15.524  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:10:15.529  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:10:15.529  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:17.809  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:10:17.823  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:10:17.823  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:18.142  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:10:18.147  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:10:18.147  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:27.940  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:10:27.947  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:10:27.947  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:28.295  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:10:28.299  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:10:28.299  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:40.004  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[255, {}]}
+2020-10-18 12:10:40.014  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:10:40.014  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:40.289  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:10:40.293  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:10:40.293  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:40.392  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 255, {}]}
+2020-10-18 12:10:40.395  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-18 12:10:40.395  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:49.260  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/124', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[124, {}]}
+2020-10-18 12:10:49.271  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:10:49.272  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:49.555  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:10:49.561  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:10:49.561  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:55.901  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/241', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[241, {}]}
+2020-10-18 12:10:55.911  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:10:55.911  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:56.191  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:10:56.195  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:10:56.195  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:10:56.294  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/241', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 241, {}]}
+2020-10-18 12:10:56.298  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-18 12:10:56.299  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:10.848  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:11:10.856  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:11:10.857  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:11.180  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:11:11.184  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:11:11.184  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:14.253  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/51', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[51, {}]}
+2020-10-18 12:11:14.265  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:11:14.265  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:14.547  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:11:14.550  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:11:14.550  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:14.643  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/51', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 51, {}]}
+2020-10-18 12:11:14.648  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-18 12:11:14.649  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:21.810  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 2, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:11:21.816  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:11:21.816  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:22.132  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:11:22.136  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:11:22.136  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:24.295  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/121', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[121, {}]}
+2020-10-18 12:11:24.305  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:11:24.305  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:24.604  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:11:24.609  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:11:24.609  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:24.708  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/121', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 121, {}]}
+2020-10-18 12:11:24.713  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-18 12:11:24.713  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:28.259  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/76', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[76, {}]}
+2020-10-18 12:11:28.270  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:11:28.270  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:28.543  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:11:28.546  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:11:28.547  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:34.263  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[52, {}]}
+2020-10-18 12:11:34.273  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:11:34.273  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:34.545  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:11:34.550  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:11:34.550  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:47.850  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:11:47.857  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:11:47.857  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:48.181  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:11:48.185  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:11:48.185  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:50.368  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:11:50.376  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:11:50.376  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:11:50.684  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:11:50.687  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:11:50.687  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:00.536  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2020-10-18 12:12:00.541  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:12:00.542  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:00.861  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:12:00.864  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:12:00.864  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:03.313  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, -1]}
+2020-10-18 12:12:03.334  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-18 12:12:03.334  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:03.638  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:12:03.644  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:12:03.644  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:05.424  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.ArchiveShowController.archives', args=[{}]}
+2020-10-18 12:12:05.436  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: archives
+2020-10-18 12:12:05.436  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:05.762  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:12:05.765  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:12:05.765  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:07.169  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/about', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.AboutShowController.about', args=[]}
+2020-10-18 12:12:07.169  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: about
+2020-10-18 12:12:07.169  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:07.455  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:12:07.460  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:12:07.460  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:08.331  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, -1]}
+2020-10-18 12:12:08.340  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-18 12:12:08.340  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:08.617  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:12:08.621  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:12:08.621  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:09.145  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:12:09.151  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:12:09.151  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:09.496  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:12:09.500  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:12:09.500  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:11.104  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/124', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[124, {}]}
+2020-10-18 12:12:11.117  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:12:11.117  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:11.379  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:12:11.383  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:12:11.383  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:14.030  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[255, {}]}
+2020-10-18 12:12:14.041  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:12:14.041  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:14.312  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:12:14.316  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:12:14.316  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:14.413  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 255, {}]}
+2020-10-18 12:12:14.416  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-18 12:12:14.416  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:19.921  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:12:19.928  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:12:19.928  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:20.176  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:12:20.179  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:12:20.179  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:21.375  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 2, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:12:21.382  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:12:21.382  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:21.713  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:12:21.716  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:12:21.716  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:24.897  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:12:24.904  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:12:24.904  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:25.174  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:12:25.180  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:12:25.180  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:29.545  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:12:29.551  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:12:29.551  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:12:29.855  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:12:29.859  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:12:29.859  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:13:52.818  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[255, {}]}
+2020-10-18 12:13:52.840  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:13:52.841  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:13:53.173  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:13:53.177  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:13:53.177  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:13:53.236  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 255, {}]}
+2020-10-18 12:13:53.239  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-18 12:13:53.240  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:14.139  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[255, {}]}
+2020-10-18 12:14:14.157  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:14:14.157  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:14.592  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:14:14.598  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:14:14.598  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:14.660  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 255, {}]}
+2020-10-18 12:14:14.664  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-18 12:14:14.664  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:32.068  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2020-10-18 12:14:32.073  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:14:32.074  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:32.345  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:14:32.348  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:14:32.348  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:34.152  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, -1]}
+2020-10-18 12:14:34.162  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-18 12:14:34.162  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:34.442  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:14:34.446  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:14:34.446  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:47.482  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/about', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.AboutShowController.about', args=[]}
+2020-10-18 12:14:47.482  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: about
+2020-10-18 12:14:47.482  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:47.808  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:14:47.812  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:14:47.812  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:48.145  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.ArchiveShowController.archives', args=[{}]}
+2020-10-18 12:14:48.156  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: archives
+2020-10-18 12:14:48.156  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:48.443  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:14:48.447  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:14:48.447  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:50.657  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2020-10-18 12:14:50.662  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:14:50.662  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:50.924  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:14:50.927  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:14:50.927  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:53.082  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/216', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], 216, {}]}
+2020-10-18 12:14:53.088  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:14:53.088  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:53.356  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:14:53.359  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:14:53.359  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:53.929  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/215', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], 215, {}]}
+2020-10-18 12:14:53.933  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:14:53.933  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:54.202  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:14:54.206  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:14:54.206  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:55.114  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/56', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], 56, {}]}
+2020-10-18 12:14:55.122  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:14:55.122  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:55.383  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:14:55.386  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:14:55.387  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:55.727  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/64', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], 64, {}]}
+2020-10-18 12:14:55.731  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:14:55.731  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:14:55.997  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:14:55.999  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:14:55.999  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:32.397  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/64', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], 64, {}]}
+2020-10-18 12:15:32.407  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:15:32.407  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:32.754  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:15:32.758  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:15:32.758  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:35.098  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, -1]}
+2020-10-18 12:15:35.107  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-18 12:15:35.107  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:35.388  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:15:35.392  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:15:35.392  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:36.435  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/49', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, 49]}
+2020-10-18 12:15:36.440  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-18 12:15:36.440  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:36.727  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:15:36.731  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:15:36.731  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:51.380  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/49', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, 49]}
+2020-10-18 12:15:51.387  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-18 12:15:51.387  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:51.740  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:15:51.744  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:15:51.744  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:53.554  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/256', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, 256]}
+2020-10-18 12:15:53.560  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-18 12:15:53.560  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:53.841  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:15:53.845  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:15:53.845  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:55.961  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/246', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, 246]}
+2020-10-18 12:15:55.968  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-18 12:15:55.968  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:56.245  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:15:56.249  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:15:56.249  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:57.705  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/47', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, 47]}
+2020-10-18 12:15:57.712  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-18 12:15:57.712  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:15:57.994  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:15:57.998  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:15:57.998  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:00.145  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/31', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, 31]}
+2020-10-18 12:16:00.152  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-18 12:16:00.152  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:00.420  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:16:00.423  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:16:00.423  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:05.695  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/search', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.search', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, p]}
+2020-10-18 12:16:05.705  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: search
+2020-10-18 12:16:05.706  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:16.056  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:16:16.062  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:16:16.062  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:16.375  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:16:16.379  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:16:16.379  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:16.889  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:16:16.893  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:16:16.894  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:17.192  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:16:17.195  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:16:17.196  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:20.496  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2020-10-18 12:16:20.501  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:16:20.501  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:20.769  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:16:20.772  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:16:20.772  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:21.297  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, -1]}
+2020-10-18 12:16:21.306  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-18 12:16:21.306  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:21.597  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:16:21.601  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:16:21.601  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:37.129  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/256', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, 256]}
+2020-10-18 12:16:37.136  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-18 12:16:37.136  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:37.415  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:16:37.418  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:16:37.419  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:40.790  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[255, {}]}
+2020-10-18 12:16:40.803  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:16:40.803  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:41.062  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:16:41.066  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:16:41.066  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:16:41.162  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 255, {}]}
+2020-10-18 12:16:41.165  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-18 12:16:41.165  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:10.657  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2020-10-18 12:17:10.663  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-18 12:17:10.663  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:10.951  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:17:10.954  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:17:10.954  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:13.504  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:17:13.512  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:17:13.512  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:13.768  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:17:13.771  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:17:13.771  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:18.408  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:17:18.415  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:17:18.415  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:18.712  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:17:18.715  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:17:18.715  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:20.522  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 2, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:17:20.528  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:17:20.528  INFO 9628 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:20.833  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:17:20.837  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:17:20.837  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:37.745  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:17:37.752  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:17:37.752  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:38.017  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:17:38.020  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:17:38.020  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:45.208  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:17:45.213  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:17:45.213  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:45.473  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:17:45.476  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:17:45.476  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:59.061  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/240', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[240, {}]}
+2020-10-18 12:17:59.073  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 12:17:59.073  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:59.370  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:17:59.373  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:17:59.373  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:17:59.472  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/240', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 240, {}]}
+2020-10-18 12:17:59.475  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-18 12:17:59.475  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:18:06.528  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:18:06.534  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:18:06.534  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:18:06.839  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:18:06.842  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:18:06.842  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:18:09.969  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3a0d210c]}
+2020-10-18 12:18:09.975  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 12:18:09.975  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 12:18:10.282  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 12:18:10.285  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 12:18:10.285  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:28:44.281  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@4299de5]}
+2020-10-18 14:28:44.302  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 14:28:44.303  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:28:44.622  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 14:28:44.625  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 14:28:44.625  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:28:52.128  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@4299de5]}
+2020-10-18 14:28:52.133  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 14:28:52.133  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:28:52.463  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 14:28:52.467  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 14:28:52.467  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:28:54.632  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@4299de5]}
+2020-10-18 14:28:54.637  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 14:28:54.637  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:28:54.946  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 14:28:54.949  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 14:28:54.949  INFO 9628 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:29:01.752  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/about', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.AboutShowController.about', args=[]}
+2020-10-18 14:29:01.752  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: about
+2020-10-18 14:29:01.752  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:29:02.021  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 14:29:02.024  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 14:29:02.024  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:29:09.122  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.ArchiveShowController.archives', args=[{}]}
+2020-10-18 14:29:09.139  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: archives
+2020-10-18 14:29:09.139  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:29:09.411  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 14:29:09.414  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 14:29:09.414  INFO 9628 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:29:11.122  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@4299de5]}
+2020-10-18 14:29:11.129  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-18 14:29:11.129  INFO 9628 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:29:11.390  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 14:29:11.394  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 14:29:11.394  INFO 9628 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:29:14.409  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[255, {}]}
+2020-10-18 14:29:14.435  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 14:29:14.435  INFO 9628 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:29:14.710  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 14:29:14.713  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 14:29:14.713  INFO 9628 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:29:14.815  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 255, {}]}
+2020-10-18 14:29:14.820  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-18 14:29:14.820  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:30:06.661  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[255, {}]}
+2020-10-18 14:30:06.671  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-18 14:30:06.671  INFO 9628 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:30:06.933  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-18 14:30:06.936  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-18 14:30:06.936  INFO 9628 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-18 14:30:07.030  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 255, {}]}
+2020-10-18 14:30:07.033  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-18 14:30:07.033  INFO 9628 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------

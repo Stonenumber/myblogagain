@@ -1,0 +1,270 @@
+2020-09-25 09:36:31.533  INFO 5616 --- [restartedMain] com.stone.blog.BlogApplication           : Starting BlogApplication on DESKTOP-49V0C56 with PID 5616 (E:\Blog\target\classes started by 18883 in E:\Blog)
+2020-09-25 09:36:31.548 DEBUG 5616 --- [restartedMain] com.stone.blog.BlogApplication           : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-25 09:36:31.548  INFO 5616 --- [restartedMain] com.stone.blog.BlogApplication           : The following profiles are active: dev
+2020-09-25 09:36:31.611  INFO 5616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-25 09:36:31.611  INFO 5616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-25 09:36:32.685  INFO 5616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-25 09:36:32.795  INFO 5616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96ms. Found 5 JPA repository interfaces.
+2020-09-25 09:36:34.248  INFO 5616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-25 09:36:34.264  INFO 5616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-25 09:36:34.264  INFO 5616 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-25 09:36:34.389  INFO 5616 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-25 09:36:34.389  INFO 5616 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2778 ms
+2020-09-25 09:36:34.609  INFO 5616 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-25 09:36:34.671  INFO 5616 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-25 09:36:34.751  INFO 5616 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-09-25 09:36:34.797  WARN 5616 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-25 09:36:34.931  INFO 5616 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-25 09:36:35.038  INFO 5616 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-25 09:36:35.175  INFO 5616 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-25 09:36:35.448  INFO 5616 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-25 09:36:35.468  INFO 5616 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-09-25 09:36:35.624  INFO 5616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-25 09:36:35.671  INFO 5616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-25 09:36:35.671  INFO 5616 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-09-25 09:36:36.234  INFO 5616 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-25 09:36:36.234  INFO 5616 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-25 09:36:36.705  INFO 5616 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-09-25 09:36:36.713  INFO 5616 --- [restartedMain] com.stone.blog.BlogApplication           : Started BlogApplication in 5.745 seconds (JVM running for 7.031)
+2020-09-25 09:37:06.029  INFO 5616 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-25 09:37:06.030  INFO 5616 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-25 09:37:06.045  INFO 5616 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-09-25 09:37:06.070  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:37:06.194  WARN 5616 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-09-25 09:37:06.206  WARN 5616 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-09-25 09:37:06.224  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:37:06.225  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:37:07.082  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:37:07.093  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:37:07.093  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:37:18.981  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:37:19.001  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:37:19.002  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:37:19.346  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:37:19.354  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:37:19.355  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:42:54.320  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:42:54.336  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:42:54.337  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:42:54.724  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:42:54.732  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:42:54.732  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:42:59.306  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:42:59.320  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:42:59.321  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:42:59.600  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:42:59.606  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:42:59.607  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:06.811  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:43:06.823  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:43:06.823  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:07.142  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:43:07.152  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:43:07.153  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:12.178  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:43:12.190  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:43:12.191  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:12.538  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:43:12.548  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:43:12.548  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:14.778  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 2, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:43:14.786  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:43:14.787  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:15.044  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:43:15.050  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:43:15.050  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:16.715  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:43:16.726  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:43:16.727  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:16.988  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:43:16.995  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:43:16.995  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:19.239  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/blog/213', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[213, {}]}
+2020-09-25 09:43:19.277  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-09-25 09:43:19.277  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:19.575  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:43:19.581  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:43:19.581  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:34.916  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/blog/212', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[212, {}]}
+2020-09-25 09:43:34.926  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-09-25 09:43:34.926  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:35.183  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:43:35.188  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:43:35.189  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:38.658  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:43:38.671  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:43:38.671  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:38.948  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:43:38.953  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:43:38.954  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:42.692  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/blog/240', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[240, {}]}
+2020-09-25 09:43:42.706  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-09-25 09:43:42.706  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:42.972  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:43:42.979  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:43:42.979  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:43:43.080  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/comments/240', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 240, {}]}
+2020-09-25 09:43:43.122  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-09-25 09:43:43.122  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:44:23.997  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/blog/240', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[240, {}]}
+2020-09-25 09:44:24.009  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-09-25 09:44:24.009  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:44:24.280  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:44:24.284  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:44:24.284  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:44:24.370  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/comments/240', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 240, {}]}
+2020-09-25 09:44:24.373  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-09-25 09:44:24.374  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:45:16.722  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:45:16.752  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:45:16.752  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:45:17.039  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:45:17.043  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:45:17.043  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:45:17.814  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/blog/240', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[240, {}]}
+2020-09-25 09:45:17.824  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-09-25 09:45:17.825  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:45:18.090  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:45:18.095  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:45:18.095  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:45:18.187  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/comments/240', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 240, {}]}
+2020-09-25 09:45:18.191  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-09-25 09:45:18.191  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:45:47.908  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/blog/51', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[51, {}]}
+2020-09-25 09:45:47.918  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-09-25 09:45:47.918  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:45:48.194  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:45:48.199  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:45:48.199  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:45:48.302  INFO 5616 --- [http-nio-8080-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/comments/51', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 51, {}]}
+2020-09-25 09:45:48.309  INFO 5616 --- [http-nio-8080-exec-3] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-09-25 09:45:48.310  INFO 5616 --- [http-nio-8080-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:45:56.338  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:45:56.349  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:45:56.349  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:45:56.624  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:45:56.629  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:45:56.629  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:45:58.532  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/blog/124', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[124, {}]}
+2020-09-25 09:45:58.543  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-09-25 09:45:58.543  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:45:58.810  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:45:58.815  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:45:58.815  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:46:10.308  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/blog/211', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[211, {}]}
+2020-09-25 09:46:10.317  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-09-25 09:46:10.317  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:46:10.577  INFO 5616 --- [http-nio-8080-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:46:10.581  INFO 5616 --- [http-nio-8080-exec-3] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:46:10.581  INFO 5616 --- [http-nio-8080-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:46:18.898  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 2, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:46:18.906  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:46:18.906  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:46:19.175  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:46:19.180  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:46:19.181  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:46:21.673  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:46:21.684  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:46:21.684  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:46:21.976  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:46:21.982  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:46:21.983  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:46:27.602  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:46:27.613  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:46:27.613  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:46:27.904  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:46:27.908  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:46:27.909  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:46:29.717  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/blog/232', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[232, {}]}
+2020-09-25 09:46:29.728  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-09-25 09:46:29.728  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:46:30.031  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:46:30.035  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:46:30.035  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:46:30.100  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/comments/232', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 232, {}]}
+2020-09-25 09:46:30.108  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-09-25 09:46:30.109  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:25.554  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.ArchiveShowController.archives', args=[{}]}
+2020-09-25 09:47:25.568  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Result: archives
+2020-09-25 09:47:25.568  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:25.849  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:25.853  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:25.853  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:32.840  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.AboutShowController.about', args=[]}
+2020-09-25 09:47:32.844  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Result: about
+2020-09-25 09:47:32.844  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:33.149  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:33.153  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:33.153  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:37.363  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:47:37.374  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:47:37.374  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:37.687  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:37.690  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:37.691  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:39.081  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2020-09-25 09:47:39.091  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Result: types
+2020-09-25 09:47:39.091  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:39.410  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:39.414  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:39.414  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:41.161  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, -1]}
+2020-09-25 09:47:41.176  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-09-25 09:47:41.176  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:41.527  INFO 5616 --- [http-nio-8080-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:41.530  INFO 5616 --- [http-nio-8080-exec-3] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:41.531  INFO 5616 --- [http-nio-8080-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:44.241  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/tags/221', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, 221]}
+2020-09-25 09:47:44.248  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-09-25 09:47:44.248  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:44.509  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:44.513  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:44.513  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:45.009  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/tags/220', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, 220]}
+2020-09-25 09:47:45.015  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-09-25 09:47:45.015  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:45.281  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:45.283  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:45.283  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:46.088  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/tags/219', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, 219]}
+2020-09-25 09:47:46.094  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-09-25 09:47:46.094  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:46.414  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:46.417  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:46.418  INFO 5616 --- [http-nio-8080-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:46.881  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/tags/218', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, 218]}
+2020-09-25 09:47:46.886  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-09-25 09:47:46.887  INFO 5616 --- [http-nio-8080-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:47.137  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:47.140  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:47.140  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:47.889  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/tags/217', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, 217]}
+2020-09-25 09:47:47.894  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-09-25 09:47:47.894  INFO 5616 --- [http-nio-8080-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:48.178  INFO 5616 --- [http-nio-8080-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:48.184  INFO 5616 --- [http-nio-8080-exec-3] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:48.184  INFO 5616 --- [http-nio-8080-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:51.376  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.AboutShowController.about', args=[]}
+2020-09-25 09:47:51.377  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Result: about
+2020-09-25 09:47:51.377  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:51.636  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:51.640  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:51.640  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:52.560  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:47:52.570  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:47:52.570  INFO 5616 --- [http-nio-8080-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:52.825  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:52.829  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:52.829  INFO 5616 --- [http-nio-8080-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:56.153  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 1, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:47:56.162  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:47:56.162  INFO 5616 --- [http-nio-8080-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:56.404  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:56.408  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:56.408  INFO 5616 --- [http-nio-8080-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:59.704  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-09-25 09:47:59.713  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : Result: index
+2020-09-25 09:47:59.713  INFO 5616 --- [http-nio-8080-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-09-25 09:47:59.961  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-09-25 09:47:59.964  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-09-25 09:47:59.964  INFO 5616 --- [http-nio-8080-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------

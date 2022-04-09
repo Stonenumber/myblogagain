@@ -1,0 +1,137 @@
+2020-10-22 11:10:01.864  INFO 6612 --- [main] com.stone.blog.BlogApplication           : Starting BlogApplication v0.0.1-SNAPSHOT on DESKTOP-49V0C56 with PID 6612 (E:\Blog\target\blog2.jar started by 18883 in E:\Blog\target)
+2020-10-22 11:10:01.867 DEBUG 6612 --- [main] com.stone.blog.BlogApplication           : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-10-22 11:10:01.868  INFO 6612 --- [main] com.stone.blog.BlogApplication           : The following profiles are active: dev
+2020-10-22 11:10:03.103  INFO 6612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-22 11:10:03.287  INFO 6612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 172ms. Found 5 JPA repository interfaces.
+2020-10-22 11:10:04.675  INFO 6612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-22 11:10:04.701  INFO 6612 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-22 11:10:04.701  INFO 6612 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-10-22 11:10:05.080  INFO 6612 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-22 11:10:05.081  INFO 6612 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3117 ms
+2020-10-22 11:10:05.600  INFO 6612 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-22 11:10:05.895  INFO 6612 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-22 11:10:06.168  WARN 6612 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-22 11:10:06.741  INFO 6612 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-10-22 11:10:06.970  INFO 6612 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-22 11:10:07.066  INFO 6612 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-22 11:10:07.534  WARN 6612 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8083 is already in use
+2020-10-22 11:10:07.538  INFO 6612 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-22 11:10:07.550  INFO 6612 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-22 11:10:08.676  INFO 6612 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-22 11:10:08.776  INFO 6612 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-22 11:10:10.355  INFO 6612 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-22 11:10:10.370  INFO 6612 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-22 11:10:10.373  INFO 6612 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-22 11:10:10.374  INFO 6612 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-22 11:10:10.388  INFO 6612 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-22 11:10:10.390  INFO 6612 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-22 11:10:10.401  INFO 6612 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-22 11:10:10.403 ERROR 6612 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8083 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8083 or configure this application to listen on another port.
+
+2020-10-22 11:11:02.690  INFO 3816 --- [main] com.stone.blog.BlogApplication           : Starting BlogApplication v0.0.1-SNAPSHOT on DESKTOP-49V0C56 with PID 3816 (E:\Blog\target\blog2.jar started by 18883 in E:\Blog\target)
+2020-10-22 11:11:02.693 DEBUG 3816 --- [main] com.stone.blog.BlogApplication           : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-10-22 11:11:02.694  INFO 3816 --- [main] com.stone.blog.BlogApplication           : The following profiles are active: dev
+2020-10-22 11:11:03.790  INFO 3816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-22 11:11:03.946  INFO 3816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 144ms. Found 5 JPA repository interfaces.
+2020-10-22 11:11:04.953  INFO 3816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-22 11:11:04.976  INFO 3816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-22 11:11:04.977  INFO 3816 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-10-22 11:11:05.078  INFO 3816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-22 11:11:05.078  INFO 3816 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2318 ms
+2020-10-22 11:11:05.493  INFO 3816 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-22 11:11:05.734  INFO 3816 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-22 11:11:06.018  WARN 3816 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-22 11:11:06.563  INFO 3816 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-10-22 11:11:06.802  INFO 3816 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-22 11:11:06.872  INFO 3816 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-22 11:11:07.292  INFO 3816 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-22 11:11:07.356  INFO 3816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2020-10-22 11:11:07.359  INFO 3816 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories¡­
+2020-10-22 11:11:08.143  INFO 3816 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-22 11:11:08.274  INFO 3816 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-22 11:11:09.876  INFO 3816 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-22 11:11:09.892  INFO 3816 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-22 11:11:11.005  INFO 3816 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-22 11:11:11.018  INFO 3816 --- [main] com.stone.blog.BlogApplication           : Started BlogApplication in 9.011 seconds (JVM running for 9.563)
+2020-10-22 11:11:20.599  INFO 3816 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-22 11:11:20.599  INFO 3816 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-22 11:11:20.614  INFO 3816 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-10-22 11:11:20.687  INFO 3816 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3b0b02a5]}
+2020-10-22 11:11:20.716  WARN 3816 --- [http-nio-8083-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-10-22 11:11:20.797  WARN 3816 --- [http-nio-8083-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-10-22 11:11:20.862  INFO 3816 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-22 11:11:20.863  INFO 3816 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:21.834  INFO 3816 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-22 11:11:21.848  INFO 3816 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-22 11:11:21.850  INFO 3816 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:23.108  INFO 3816 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2020-10-22 11:11:23.156  INFO 3816 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-22 11:11:23.156  INFO 3816 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:23.664  INFO 3816 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-22 11:11:23.689  INFO 3816 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-22 11:11:23.692  INFO 3816 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:24.874  INFO 3816 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[Page request [number: 0, size 4, sort: createTime: DESC], {}, -1]}
+2020-10-22 11:11:24.917  INFO 3816 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: tags
+2020-10-22 11:11:24.917  INFO 3816 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:25.350  INFO 3816 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-22 11:11:25.359  INFO 3816 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-22 11:11:25.359  INFO 3816 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:28.084  INFO 3816 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/243', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[243, {}]}
+2020-10-22 11:11:28.195  INFO 3816 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-22 11:11:28.195  INFO 3816 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:28.739  INFO 3816 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-22 11:11:28.749  INFO 3816 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-22 11:11:28.750  INFO 3816 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:28.816  INFO 3816 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/243', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 243, {}]}
+2020-10-22 11:11:28.846  INFO 3816 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-22 11:11:28.846  INFO 3816 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:32.083  INFO 3816 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[Page request [number: 0, size 7, sort: updateTime: DESC], -1, {}]}
+2020-10-22 11:11:32.095  INFO 3816 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : Result: types
+2020-10-22 11:11:32.095  INFO 3816 --- [http-nio-8083-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:32.451  INFO 3816 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-22 11:11:32.462  INFO 3816 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-22 11:11:32.462  INFO 3816 --- [http-nio-8083-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:33.322  INFO 3816 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}, org.apache.catalina.session.StandardSessionFacade@3b0b02a5]}
+2020-10-22 11:11:33.336  INFO 3816 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : Result: index
+2020-10-22 11:11:33.336  INFO 3816 --- [http-nio-8083-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:33.761  INFO 3816 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-22 11:11:33.770  INFO 3816 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-22 11:11:33.770  INFO 3816 --- [http-nio-8083-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:36.904  INFO 3816 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/258', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[258, {}]}
+2020-10-22 11:11:36.932  INFO 3816 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-22 11:11:36.933  INFO 3816 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:37.216  INFO 3816 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-22 11:11:37.224  INFO 3816 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-22 11:11:37.225  INFO 3816 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:11:37.313  INFO 3816 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/258', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 258, {}]}
+2020-10-22 11:11:37.327  INFO 3816 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-22 11:11:37.328  INFO 3816 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:14:46.267  INFO 3816 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/blog/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[255, {}]}
+2020-10-22 11:14:46.282  INFO 3816 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: blog
+2020-10-22 11:14:46.282  INFO 3816 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:14:46.568  INFO 3816 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2020-10-22 11:14:46.575  INFO 3816 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2020-10-22 11:14:46.576  INFO 3816 --- [http-nio-8083-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:14:46.666  INFO 3816 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.Postcomments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 255, {}]}
+2020-10-22 11:14:46.670  INFO 3816 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-22 11:14:46.670  INFO 3816 --- [http-nio-8083-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:14:49.888  INFO 3816 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.post', args=[Comment{id=null, nickname='1', email='null', content='1', avatar='null', blog=Blog{id=255, title='null', content='null', firstPicture='null', flag='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, admin=false, privately=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', blog=null, replyComments=[], parentComment=null, createTime=null, adminComment=false}, createTime=null, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@3b0b02a5]}
+2020-10-22 11:14:49.929  INFO 3816 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : Result: redirect:/comments/255
+2020-10-22 11:14:49.929  INFO 3816 --- [http-nio-8083-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2020-10-22 11:14:49.942  INFO 3816 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/comments/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.comments', args=[Page request [number: 0, size 5, sort: createTime: DESC], 255, {}]}
+2020-10-22 11:14:49.950  INFO 3816 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2020-10-22 11:14:49.950  INFO 3816 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------

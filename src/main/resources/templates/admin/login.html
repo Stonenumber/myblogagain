@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/fragments :: head(~{::title})">
+  <title>Login</title>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<!--登录-->
+<div class="m-container-small m-padded-tb-massive" style="max-width: 30em !important;">
+  <div class="ui container">
+    <div class="column">
+      <h2 class="ui teal image header">
+        <img src="../../static/images/candy.png" th:src="@{/images/candy.png}" class="image">
+        <div class="content">
+          Background Management
+        </div>
+      </h2>
+      <form class="ui large form" method="post" action="#" th:action="@{/admin/login}">
+        <div class="ui segment">
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="user icon"></i>
+              <input type="text" name="username" placeholder="Username">
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="lock icon"></i>
+              <input type="password" name="password" placeholder="Password">
+            </div>
+          </div>
+          <button class="ui fluid large teal submit button">Login</button>
+        </div>
+
+        <div class="ui mini error message">
+        </div>
+        <!-- Message非空时，即检测到错误时，显示-->
+        <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">Wrong Username or Password</div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--  以下注释内容只有在Thymeleaf中才可以使用-->
+<!--/*/<th:block th:replace="fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+
+<!--输入非空验证-->
+<script>
+  $('.ui.form').form({
+    fields : {
+      username : {
+        identifier: 'username',
+        rules: [{
+          type : 'empty',
+          prompt: 'Username can\'t be null'
+        }]
+      },
+      password : {
+        identifier: 'password',
+        rules: [{
+          type : 'empty',
+          prompt: 'Password can\'t be null'
+        }]
+      }
+
+    }
+  });
+
+</script>
+</body>
+</html>

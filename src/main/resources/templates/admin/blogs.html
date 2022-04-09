@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/fragments :: head(~{::title})">
+  <title>博客管理</title>
+</head>
+<body>
+
+  <!--导航-->
+  <nav th:replace="admin/fragments :: menu(1)">
+  </nav>
+
+  <!--快捷栏-->
+  <div class="ui attached pointing menu">
+    <div class="ui container">
+      <div class="right menu">
+        <a href="#" th:href="@{/admin/blogs/input}" class="item">发布</a>
+        <a href="#" th:href="@{/admin/blogs}" class="teal active item">列表</a>
+      </div>
+    </div>
+  </div>
+
+  <!--中间内容-->
+  <div  class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+      <!--搜索栏-->
+      <form class="ui secondary segment form">
+        <!--放置分页页数-->
+        <input type="hidden" name="page">
+        <div class="inline fields">
+          <!--搜索名称-->
+          <div class="field">
+            <input type="text" name="title" placeholder="Title">
+          </div>
+          <!--搜索类型-->
+          <div class="field">
+            <div class="ui labeled action input">
+              <div class="ui type selection dropdown">
+                <input type="hidden" name="typeId" >
+                <i class="dropdown icon"></i>
+                <div class="default text">Type</div>
+                <div class="menu">
+                  <div th:each="type : ${types}"  class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">Type holder</div>
+                </div>
+              </div>
+              <!--清空类型-->
+              <button id="clear-btn" class="ui compact button">Clear</button>
+            </div>
+          </div>
+          <!--推荐-->
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" id="recommend" name="recommend">
+              <label for="recommend">Recommend</label>
+            </div>
+          </div>
+          <!--搜索-->
+          <div class="field">
+            <button type="button" id="search-btn"  class="ui mini teal basic button"><i class="search icon"></i>Search</button>
+          </div>
+        </div>
+      </form>
+
+      <!--展示内容-->
+      <div id="table-container">
+        <!--表格-->
+        <table th:fragment="blogList" class="ui compact teal table">
+          <thead>
+          <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Type</th>
+            <th>Recommend</th>
+            <th>Published</th>
+            <th>Privately</th>
+            <th>Update time</th>
+            <th>Operation</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each = "blog, iterStat : ${page.content}">
+            <td th:text="${iterStat.count}">1</td>
+            <td th:text="${blog.title} != null ? ${blog.title} : 'nothing'">Title holder</td>
+            <td th:text="${blog.type} != null ? ${blog.type.name} : 'nothing'">Type holder</td>
+            <td th:text="${blog.recommend ? 'Yes': 'No'}">Recommend holder</td>
+            <td th:text="${blog.published ? 'Yes': 'No'}">Published holder</td>
+            <td th:text="${blog.privately ? 'Yes': 'No'}">Privately holder</td>
+            <td th:text="${blog.updateTime}">Time holder</td>
+            <td>
+              <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">Edit</a>
+              <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui mini red basic button">Delete</a>
+            </td>
+          </tr>
+          </tbody>
+          <tfoot>
+          <tr>
+            <!-- 合并的列数-->
+            <th colspan="8">
+              <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
+                <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">Previous</a>
+                <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="item" th:unless="${page.last}">Next</a>
+              </div>
+              <a href="#" th:href="@{/admin/blogs/input}" class="ui mini right floated teal basic button">Add</a>
+            </th>
+          </tr>
+          </tfoot>
+        </table>
+        <!--提示-->
+        <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+          <i class="close icon"></i>
+          <div class="header">Prompt:</div>
+          <p th:text="${message}">Message holder</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!--底部footer-->
+  <footer th:replace="admin/fragments :: footer" >
+  </footer>
+
+  <!--  以下注释内容只有在Thymeleaf中才可以使用-->
+  <!--/*/<th:block th:replace="admin/fragments :: script">/*/-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <!--/*/</th:block>/*/-->
+
+  <script>
+    $('.menu.toggle').click(function () {
+      $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown({
+      on : 'hover'
+    });
+    $('.message .close')
+            .on('click', function () {
+              $(this).closest('.message').transition('fade');
+            });
+
+    //清空Type选择
+    $('#clear-btn')
+            .on('click', function() {
+              $('.ui.type.dropdown').dropdown('clear');
+            });
+
+    function page(obj) {
+      //设定分页的页数
+      $("[name='page']").val($(obj).data("page"));
+      loaddata();
+    }
+
+    //ajax局部渲染
+    $("#search-btn").click(function () {
+      //搜索结果得从第一页开始展示，属性page的值则为0
+      $("[name='page']").val(0);
+      loaddata();
+    });
+
+    function loaddata() {
+      $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search",{
+        title : $("[name='title']").val(),
+        typeId : $("[name='typeId']").val(),
+        recommend : $("[name='recommend']").prop('checked'),
+        page : $("[name='page']").val() //告知分页的页数
+      });
+    }
+
+
+  </script>
+</body>
+</html>
