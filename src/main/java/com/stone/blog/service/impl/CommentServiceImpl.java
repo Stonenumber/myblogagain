@@ -1,95 +1,77 @@
 package com.stone.blog.service.impl;
 
-import com.stone.blog.dao.CommentRepository;
+import com.stone.blog.dao.CommentMapper;
 import com.stone.blog.po.Comment;
 import com.stone.blog.service.CommentService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class CommentServiceImpl implements CommentService {
 
     @Autowired
-    private CommentRepository commentRepository;
+    private CommentMapper commentMapper;
 
     @Override
     public List<Comment> listCommentsByBlogId(Long blogId) {
-        Sort sort = new Sort(Sort.Direction.DESC, "createTime");
-        //拿到顶级节点评论
-        List<Comment> comments = commentRepository.findByBlogIdAndParentCommentNull(blogId, sort);
-        return eachComment(comments);
+        List<Comment> comments = commentMapper.findByBlogId(blogId);//一级评论
+        for(Comment comment : comments){ //每个一级评论下的子评论
+            List<Comment> sub = listCommentsByParentComment(comment);
+            comment.setReplyComments(sub);
+        }
+        return comments;
+
     }
 
     @Override
-    public Comment saveComment(Comment comment) {
-        //ParentComment里只有id属性赋值了
-        Long parentCommentId = comment.getParentComment().getId();
-        if(parentCommentId != -1){
-            comment.setParentComment(commentRepository.getOne(parentCommentId));
-        }else{
-            comment.setParentComment(null);
+    public List<Comment> listCommentsByParentComment(Comment parentComment) {//某个评论的子评论
+        List<Comment> subComments = new ArrayList<>();
+        Queue<Comment> queue = new LinkedList<>();
+        queue.offer(parentComment);
+        while(!queue.isEmpty()){
+            Comment cur = queue.poll();
+            List<Comment> curSub = commentMapper.findByParentCommentId(cur.getId());
+            for(Comment sub : curSub){
+                queue.offer(sub);
+            }
+            if(!cur.equals(parentComment))subComments.add(cur);
         }
+        return subComments;
+    }
+
+
+    @Override
+    public List<Comment> listComments() { //list comments on background
+        return commentMapper.listComments();
+    }
+
+    @Override
+    public int saveComment(Comment comment) {
         comment.setCreateTime(new Date());
-        return commentRepository.save(comment);
-    }
-
-    @Override
-    public List<Comment> listComments() {
-        return commentRepository.findAll();
-    }
-
-    @Override
-    public void deleteComment(Long id) {
-        commentRepository.delete(id);
-    }
-
-    @Override
-    public List<Comment> listChildrenComments(Comment comment) {
-        Comment temp = new Comment();
-        BeanUtils.copyProperties(comment, temp);
-        List<Comment> replies = temp.getReplyComments();
-        for(Comment reply1 : replies) {
-            recursively(reply1);
-        }
-        temp.setReplyComments(tempReplys);
-        tempReplys = new ArrayList<>();
-        return temp.getReplyComments();
-    }
-
-    @Override
-    public Comment findById(Long id) {
-        return commentRepository.getOne(id);
+        return commentMapper.saveComment(comment);
     }
 
     //删除评论及所有的子评论
     @Override
     public void deleteCommentAndChildren(Comment comment) {
-        List<Comment> replies = comment.getReplyComments();
-        if (replies.size() > 0){
-            for (Comment reply : replies){
-                deleteCommentAndChildren(reply);
-            }
+        List<Comment> subComment = listCommentsByParentComment(comment);
+        for(int i = subComment.size() - 1; i >= 0; i--){ //从后往前
+            Comment sub = subComment.get(i);
+            commentMapper.deleteByCommentId(sub.getId());
         }
-        commentRepository.delete(comment);
+        commentMapper.deleteByCommentId(comment.getId());
     }
 
     @Override
-    public Page<Comment> pageList(Pageable pageable) {
-        return commentRepository.findAll(pageable);
+    public Comment findById(Long id) {
+        return commentMapper.findByCommentId(id);
     }
 
-    @Override
-    public Page<Comment> pageListByBlogId(Long blogId, Pageable pageable) {
-        return commentRepository.findByBlogId(blogId, pageable);
-    }
+
+
 
     /**
      * 循环每个顶级的评论节点
@@ -115,7 +97,7 @@ public class CommentServiceImpl implements CommentService {
      */
     private void combineChildren(List<Comment> comments) {
 
-        for (Comment comment : comments) {
+       /* for (Comment comment : comments) {
             List<Comment> replys1 = comment.getReplyComments();
             for(Comment reply1 : replys1) {
                 //循环迭代，找出子代，存放在tempReplys中
@@ -125,7 +107,8 @@ public class CommentServiceImpl implements CommentService {
             comment.setReplyComments(tempReplys);
             //清除临时存放区
             tempReplys = new ArrayList<>();
-        }
+        }*/
+       return;
     }
 
     //存放迭代找出的所有子代的集合
@@ -136,12 +119,26 @@ public class CommentServiceImpl implements CommentService {
      * @return
      */
     private void recursively(Comment comment) {
-        tempReplys.add(comment);//顶节点添加到临时存放集合
+        /*tempReplys.add(comment);//顶节点添加到临时存放集合
         if (comment.getReplyComments().size()>0) {
             List<Comment> replys = comment.getReplyComments();
             for (Comment reply : replys) {
                 recursively(reply);
             }
-        }
+        }*/
+        return;
     }
+
+
+    /*return eachComment(comments);*/
+     /*Comment temp = new Comment();
+        BeanUtils.copyProperties(comment, temp);
+        List<Comment> replies = temp.();
+        for(Comment reply1 : replies) {
+            recursively(reply1);
+        }
+        temp.setReplyComments(tempReplys);
+        tempReplys = new ArrayList<>();
+        return temp.getReplyComments();*/
+
 }

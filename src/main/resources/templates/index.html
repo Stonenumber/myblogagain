@@ -26,7 +26,7 @@
                 <h3 class="ui teal header">Blog</h3>
               </div>
               <div class="right aligned column">
-                Total <h2 class="ui teal header m-inline-block m-text-thin" th:text="${page.totalElements}"> 14 </h2> articles
+                Total <h2 class="ui teal header m-inline-block m-text-thin" th:text="${pageInfo.total}"> 14 </h2> articles
               </div>
             </div>
           </div>
@@ -34,10 +34,10 @@
           <!--content-->
           <div class="ui attached  segment">
 
-            <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}" >
+            <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${pageInfo.list}" >
               <div class="ui middle aligned mobile reversed stackable grid" >
                 <div class="eleven wide column">
-                  <h3 class="ui header" ><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}"  >Blog title</a></h3>
+                  <h3 class="ui header" ><a th:href="@{/blog/{id}(id=${blog.id})}" class="m-black" th:text="${blog.title}"  >Blog title</a></h3>
                   <p class="m-text" th:text="${blog.description}">Blog description</p>
                   <div class="ui grid">
                     <div class="eleven wide column">
@@ -47,7 +47,7 @@
                           <div class="content"><a href="#" th:href="@{/about}" target="_blank" class="header" th:text="${blog.user.nickname}">Stone</a></div>
                         </div>
                         <div class="item">
-                          <i class="calendar icon"></i> <span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2020-09-01</span>
+                          <i class="calendar icon"></i> <span th:text="${#dates.format(blog.createTime, 'yyyy-MM-dd')}">2020-09-01</span>
                         </div>
                         <div class="item">
                           <i class="eye icon"></i> <span th:text="${blog.views}">121</span>
@@ -55,7 +55,7 @@
                       </div>
                     </div>
                     <div class="right aligned five wide column">
-                      <a href="#" th:href="@{/types/{id}(id=${blog.type.id})}" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.type.name}">type</a>
+                      <a href="#" th:href="@{/types/{id}(id=${blog.type.id})}"  class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.type.name}">type</a>
                     </div>
                   </div>
                 </div>
@@ -71,13 +71,13 @@
           </div>
 
           <!--footer-->
-          <div class="ui bottom attached segment"  th:if="${page.totalPages}>1">
+          <div class="ui bottom attached segment">
             <div class="ui middle aligned two column grid">
               <div class="column">
-                <a href="#" th:href="@{/(page=${page.number}-1)}"  th:unless="${page.first}"class="ui mini teal basic button">previous</a>
+                <a href="#" th:href="@{/(pageNum = ${pageInfo.hasPreviousPage} ? ${pageInfo.prePage} : 1)}"  class="ui mini teal basic button">previous</a>
               </div>
               <div class="right aligned column">
-                <a href="#"  th:href="@{/(page=${page.number}+1)}"  th:unless="${page.last}" class="ui mini teal basic button">next</a>
+                <a href="#"  th:href="@{/(pageNum = ${pageInfo.hasNextPage}? ${pageInfo.nextPage} : ${pageInfo.pageNum})}" class="ui mini teal basic button">next</a>
               </div>
             </div>
           </div>
@@ -96,14 +96,14 @@
                  Types
                 </div>
                 <div class="right aligned column">
-                  <a href="#" th:href="@{/types/-1}" target="_blank">more <i class="angle double right icon"></i></a>
+                  <a href="#" th:href="@{/types/-1}">more <i class="angle double right icon"></i></a>
                 </div>
               </div>
             </div>
             <!--分类内容-->
             <div class="ui teal segment">
               <div class="ui fluid vertical menu" >
-                <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item" th:each="type : ${types}">
+                <a href="#" th:href="@{/types/{id}(id=${type.id})}"  class="item" th:each="type : ${types}">
                   <span th:text="${type.name}">Type holder</span>
                   <div class="ui teal basic  label" th:text="${#arrays.length(type.blogs)}">13</div>
                 </a>
@@ -126,7 +126,7 @@
             </div>
             <!--作者-->
             <div class="ui teal segment">
-              <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui teal basic  label m-margin-tb-tiny" th:each="tag : ${tags}">
+              <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" class="ui teal basic  label m-margin-tb-tiny" th:each="tag : ${tags}">
                 <span th:text="${tag.name}">Name holder</span> <div class="detail" th:text="${#arrays.length(tag.blogs)}">23</div>
               </a>
             </div>
@@ -139,8 +139,8 @@
                   Recommend
             </div>
             <!--内容-->
-              <div class="ui segment" th:each="blog : ${RecommendBlogs}">
-                <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black m-text-thin" th:text="${blog.title}">Title holder</a>
+              <div class="ui segment" th:each="blog : ${recommendBlog}">
+                <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" class="m-black m-text-thin" th:text="${blog.title}">Title holder</a>
               </div>
 
           </div>

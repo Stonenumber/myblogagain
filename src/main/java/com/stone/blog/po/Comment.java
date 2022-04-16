@@ -2,43 +2,27 @@ package com.stone.blog.po;
 
 import ch.qos.logback.core.pattern.color.BoldGreenCompositeConverter;
 import lombok.Data;
+import lombok.experimental.Accessors;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Data
+@Accessors(chain = true)
 public class Comment {
 
     private Long id;
     private String nickname;
+    private String avatar; //头像
     private String email;
     private String content;
-    private String avatar; //头像
-    private Blog blog;
-    //一个评论有很多子评论
-    private List<Comment> replyComments = new ArrayList<>();
-    //很多个子评论对应一个父评论
-    private Comment parentComment;
+
     private Date createTime;
-    private boolean adminComment;
+    private boolean adminComment;//是否为管理员评论
 
-    public boolean isAdminComment() {
-        return adminComment;
-    }
+    private Long blogId; //对应的blog
+    private Long parentCommentId; //对应的父评论，可为null
 
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", nickname='" + nickname + '\'' +
-                ", email='" + email + '\'' +
-                ", content='" + content + '\'' +
-                ", avatar='" + avatar + '\'' +
-                ", blog=" + blog +
-                ", replyComments=" + replyComments +
-                ", parentComment=" + parentComment +
-                ", createTime=" + createTime +
-                ", adminComment=" + adminComment +
-                '}';
-    }
+    private List<Comment> replyComments; // 子评论
 }

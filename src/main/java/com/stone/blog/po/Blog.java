@@ -13,15 +13,18 @@ public class Blog {
     private String title;
     private String flag;
     private Integer views;
-    private Type type;
     private String firstPicture;
     private String description;
-    private User user;
     private String content;
-    private Integer appreciation; //点赞
+    private Long appreciation; //点赞
+    private String tagIds;
+    private long typeId;
+    private long userId;
+
     private List<Tag> tags = new ArrayList<>();
     private List<Comment> comments = new ArrayList<>();
-    private String tagIds;
+    private User user;
+    private Type type;
 
     private Date createTime;
     private Date updateTime;
@@ -32,32 +35,6 @@ public class Blog {
     private boolean recommend;
     private boolean admin;
     private boolean privately;
-
-
-    public boolean isAdmin() {
-        return admin;
-    }
-
-    public boolean isPrivately() {
-        return privately;
-    }
-
-    public boolean isShareStatement() {
-        return shareStatement;
-    }
-
-    public boolean isCommentable() {
-        return commentable;
-    }
-
-    public boolean isPublished() {
-        return published;
-    }
-
-    public boolean isRecommend() {
-        return recommend;
-    }
-
 
     public void init() {
         this.tagIds = tagsToIds(this.getTags());
@@ -73,32 +50,5 @@ public class Blog {
         return ids.toString().substring(1);
     }
 
-
-    @Override
-    public String toString() {
-        return "Blog{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", firstPicture='" + firstPicture + '\'' +
-                ", flag='" + flag + '\'' +
-                ", views=" + views +
-                ", appreciation=" + appreciation +
-                ", shareStatement=" + shareStatement +
-                ", commentabled=" + commentable +
-                ", published=" + published +
-                ", recommend=" + recommend +
-                ", admin=" + admin +
-                ", privately=" + privately +
-                ", createTime=" + createTime +
-                ", updateTime=" + updateTime +
-                ", type=" + type +
-                ", tags=" + tags +
-                ", user=" + user +
-                ", comments=" + comments +
-                ", tagIds='" + tagIds + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }
 

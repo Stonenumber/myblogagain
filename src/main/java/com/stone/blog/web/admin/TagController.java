@@ -1,21 +1,16 @@
 package com.stone.blog.web.admin;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.stone.blog.po.Tag;
 import com.stone.blog.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 @RequestMapping("/admin")
@@ -24,9 +19,12 @@ public class TagController {
     @Autowired
     private TagService tagService;
 
-    @GetMapping("/tags")
-    public String tags(@PageableDefault(size = 3, sort = {"id"}, direction = Sort.Direction.DESC)Pageable pageable, Model model){
-        model.addAttribute("page", tagService.pageList(pageable));
+    @GetMapping("/tags") //get all tags
+    public String tags(@RequestParam(required = false, defaultValue = "1", value = "pageNum") int pageNum, Model model){
+        PageHelper.startPage(pageNum, 8);
+        List<Tag> allTag = tagService.getAllTag();
+        PageInfo pageInfo = new PageInfo(allTag);
+        model.addAttribute("page", pageInfo);
         return "admin/tags";
     }
 
@@ -50,8 +48,8 @@ public class TagController {
         return "redirect:/admin/tags";
     }
 
-    @PostMapping("/tags")
-    public String postTags(@Valid Tag tag, BindingResult result, RedirectAttributes attributes){
+    @PostMapping("/tags") // save or update tag
+    public String postTags(Tag tag, BindingResult result, RedirectAttributes attributes){
        Tag t =  tagService.getTagByName(tag.getName());
        if(t != null){
            result.rejectValue("name", "nameError", "Tags already existed.");
@@ -59,8 +57,8 @@ public class TagController {
        if(result.hasErrors()){
            return "admin/tags-input";
        }
-       Tag t1 = tagService.saveTag(tag);
-       if(t1 != null){
+       int t1 = tagService.saveTag(tag);
+       if(t1 == 1){
            attributes.addFlashAttribute("message", "Success");
        }else{
            attributes.addFlashAttribute("massage", "Fail");
@@ -68,8 +66,8 @@ public class TagController {
         return "redirect:/admin/tags";
     }
 
-    @PostMapping("/tags/{id}")
-    public String postTagsById(@PathVariable Long id, @Valid Tag tag, BindingResult result, RedirectAttributes attributes){
+    @PostMapping("/tags/{id}") // update tag by id
+    public String postTagsById(@PathVariable Long id, Tag tag, BindingResult result, RedirectAttributes attributes){
         Tag t = tagService.getTagByName(tag.getName());
         if(t != null){
             result.rejectValue("name", "nameError", "Tags already existed.");
@@ -77,8 +75,8 @@ public class TagController {
         if(result.hasErrors()){
             return "admin/tags-input";
         }
-        Tag t1 = tagService.updateTag(id, tag);
-        if(t1 != null){
+        int t1 = tagService.updateTag(tag);
+        if(t1 == 1){
             attributes.addFlashAttribute("message", "Success");
         }else{
             attributes.addFlashAttribute("message", "Fail");

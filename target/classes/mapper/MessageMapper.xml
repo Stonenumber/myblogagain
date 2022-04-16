@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stone.blog.dao.MessageMapper">
+    <resultMap id="message" type="com.stone.blog.po.Message">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="content" column="content"/>
+        <result property="createTime" column="create_time"/>
+        <result property="admin" column="admin"/>
+        <result property="parentMessageId" column="parent_message_id"/>
+    </resultMap>
+
+    <select id="getAllParentMessage" resultMap="message">
+        select * from t_message where parent_message_id = -1 order by create_time desc
+    </select>
+
+    <select id="getByParentMessageId" resultMap="message">
+        select * from t_message where parent_message_id = #{id}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into t_message (name, content, create_time, admin, parent_message_id)
+        values (#{name}, #{content}, #{createTime}, #{admin},  #{parentMessageId})
+    </insert>
+
+    <select id="listMessages" resultMap="message">
+        select * from t_message order by create_time desc
+    </select>
+
+    <delete id="delete">
+        delete from t_message where id = #{id}
+    </delete>
+
+    <select id="getById" resultMap="message">
+        select * from t_message where id = #{id}
+    </select>
+
+</mapper>

@@ -23,9 +23,9 @@
       <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'">Type</a>
       <a href="#" th:href="@{/tags/-1}" class=" m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'">Author</a>
       <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'">Archive</a>
-      <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'">About me</a>
+      <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'">Me & Message</a>
       <div class="right m-item item m-mobile-hide">
-        <form action="#" name="search" th:action="@{/search}" target="_blank" method="post">
+        <form action="#" name="search" th:action="@{/search}" method="post">
           <div class="ui icon inverted transparent input m-margin-tb-tiny">
             <input name="query" type="text" placeholder="Search...." th:value="${query}">
             <i onclick="document.forms['search'].submit()" class="search link icon"></i>

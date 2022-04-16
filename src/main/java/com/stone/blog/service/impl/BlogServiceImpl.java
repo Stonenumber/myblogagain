@@ -1,155 +1,140 @@
 package com.stone.blog.service.impl;
-
 import com.stone.blog.NotFoundException;
 import com.stone.blog.dao.BlogMapper;
 import com.stone.blog.po.Blog;
-import com.stone.blog.po.Type;
+import com.stone.blog.po.BlogAndTag;
+import com.stone.blog.po.Tag;
 import com.stone.blog.service.BlogService;
 import com.stone.blog.util.MarkdownUtils;
-import com.stone.blog.util.MyBeanUtils;
 import com.stone.blog.vo.BlogQuery;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.criteria.*;
 import java.util.*;
 
 @Service
 public class BlogServiceImpl implements BlogService {
 
     @Autowired
-    private BlogMapper blogMapper;
+    BlogMapper blogMapper;
 
-    @Transactional
     @Override
     public Blog getBlog(Long id) {
-        return blogMapper.getOne(id);
-    }
+        return blogMapper.getBackBlog(id);
+    } //后台获取博客
 
-    @Transactional
     @Override
-    public Blog getAndConvert(Long id) {
-        Blog b = blogMapper.getOne(id);
-        if(b == null){
-            throw new NotFoundException("Not existed.");
-        }
-        Blog blog = new Blog();
-        BeanUtils.copyProperties(b, blog);
-        String content = blog.getContent();
-        //MD格式转换成HTML格式
-        blog.setContent(MarkdownUtils.markdownToHtml(content));
+    public Blog getDetailedBlog(Long id) {
         blogMapper.updateViews(id);
+        Blog blog = blogMapper.getFrontBlog(id);
+        if (blog == null) {
+            throw new NotFoundException("该博客不存在");
+        }
+        String content = blog.getContent();
+        blog.setContent(MarkdownUtils.markdownToHtmlExtensions(content));  //将Markdown格式转换成html
         return blog;
     }
 
     @Override
-    public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
-        return blogRepository.findAll(new Specification<Blog>() {
-            @Override //实现动态查询，封装成对象， cq放置条件， cb放置查询表达式
-            public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
-                List<Predicate> predicates = new ArrayList<>();
-                if (!"".equals(blog.getTitle()) && blog.getTitle() != null) {
-                    predicates.add(cb.like(root.<String>get("title"), "%" + blog.getTitle() + "%"));
-                }
-                if (blog.getTypeId() != null) {
-                    predicates.add(cb.equal(root.<Type>get("type").get("id"), blog.getTypeId()));
-                }
-                if (blog.isRecommend()) {
-                    predicates.add(cb.equal(root.<Boolean>get("recommend"), blog.isRecommend()));
-                }
-                cq.where(predicates.toArray(new Predicate[predicates.size()]));
-                return null;
-            }
-        }, pageable);
+    public List<Blog> getAllBlog() {
+        return blogMapper.getBackAll();
     }
 
     @Override
-    public Page<Blog> listBlog(Pageable pageable) {
-        return blogRepository.findAll(pageable);
+    public List<Blog> getByTypeId(Long typeId) {
+        return blogMapper.getByTypeId(typeId);
     }
 
     @Override
-    public Page<Blog> listBlog(Long tagId, Pageable pageable) {
-        return blogRepository.findAll(new Specification<Blog>() {
-            @Override
-            public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
-                //关联Blog和Tag，如果blog里面tag的Id和TagId相等，则返回Blog对象
-                Join join = root.join("tags");
-                return criteriaBuilder.equal(join.get("id"), tagId);
-            }
-        }, pageable);
+    public List<Blog> getByTagId(Long tagId) {
+        return blogMapper.getByTagId(tagId);
     }
 
     @Override
-    public Page<Blog> listBlog(String query, Pageable pageable) {
-        return blogRepository.findByQuery(query, pageable);
-    }
-
-    @Transactional
-    @Override
-    public Blog saveBlog(Blog blog) {
-        //第一次提交和修改的区别
-        if (blog.getId() == null) {
-            blog.setCreateTime(new Date());
-            blog.setUpdateTime(new Date());
-            blog.setViews(0);
-        } else {
-            blog.setUpdateTime(new Date());
-        }
-        return blogRepository.save(blog);
-    }
-
-    @Transactional
-    @Override
-    public Blog updateBlog(Long id, Blog blog) {
-        Blog b = blogRepository.getOne(id);
-        if (b == null) {
-            throw new NotFoundException("Blog not exist.");
-        }
-        //第三个参数为忽略复制的列表，当blog中属性为空时，就忽略到，保留原有的属性
-        //String...作为参数时，形参，可传入0至多个String类型对象或是String[]对象
-        BeanUtils.copyProperties(blog, b, MyBeanUtils.getNullPropertyName(blog));
-        b.setUpdateTime(new Date());
-        return blogRepository.save(b);
-    }
-
-    @Transactional
-    @Override
-    public void deleteBlog(Long id) {
-        blogRepository.deleteById(id);
+    public List<Blog> getIndexBlog() {
+        return blogMapper.getFrontAll();
     }
 
     @Override
-    public List<Blog> listRecommendTopBlog(Integer size) {
-        Sort sort = new Sort(Sort.Direction.DESC, "updateTime");
-        Pageable pageable = new PageRequest(0, size, sort);
-        return blogRepository.findTop(pageable);
+    public List<Blog> getAllRecommendBlog() {
+        return blogMapper.getByRecommend();
+    }
+
+    @Override
+    public List<Blog> getAllPrivateBlog() {
+        return blogMapper.getByPrivately();
+    }
+
+    @Override
+    public List<Blog> getSearchBlog(String query) {
+        return blogMapper.getSearchBlog(query);
     }
 
     @Override
     public Map<String, List<Blog>> archiveBlog() {
-        List<String> years = blogRepository.findGroupYear();
+        List<String> years = blogMapper.findGroupYear();
+        Set<String> set = new HashSet<>(years);  //set去掉重复的年份
         Map<String, List<Blog>> map = new HashMap<>();
-        for (String year : years){
-            map.put(year, blogRepository.findByYear(year));
+        for (String year : set) {
+            map.put(year, blogMapper.findByYear(year));
         }
         return map;
     }
 
     @Override
-    public Long countBlog() {
-        return blogRepository.count();
+    public int countBlog() {
+        return blogMapper.getBackAll().size();
     }
 
     @Override
-    public Page<Blog> listBlogByPrivately(Pageable pageable) {
-        return blogRepository.findBlogsByPrivately(pageable);
+    public List<Blog> searchAllBlog(BlogQuery blog) {
+        return blogMapper.searchAllBlog(blog);
     }
+
+    @Override
+    public List<Blog> topAppreciationBlogs(int num) {
+        return blogMapper.topAppreciation(num);
+    }
+
+
+    @Override    //新增博客
+    public int saveBlog(Blog blog) {
+        blog.setCreateTime(new Date());
+        blog.setUpdateTime(new Date());
+        blog.setViews(0);
+        //保存博客
+        blogMapper.save(blog);
+        //保存博客后才能获取自增的id
+        Long id = blog.getId();
+        //将标签的数据存到t_blogs_tag表中
+        List<Tag> tags = blog.getTags();
+        BlogAndTag blogAndTag = null;
+        for (Tag tag : tags) {
+            //新增时无法获取自增的id,在mybatis里修改
+            blogAndTag = new BlogAndTag(tag.getId(), id);
+            blogMapper.saveBlogAndTag(blogAndTag);
+        }
+        return 1;
+    }
+
+    @Override   //编辑博客
+    public int updateBlog(Blog blog) {
+        blog.setUpdateTime(new Date());
+        //先将原始的t_blog_tags关系删除
+        blogMapper.deleteBlogTags(blog.getId());
+        //将标签的数据存到t_blog_tags表中
+        List<Tag> tags = blog.getTags();
+        BlogAndTag blogAndTag = null;
+        for (Tag tag : tags) {
+            blogAndTag = new BlogAndTag(tag.getId(), blog.getId());
+            blogMapper.saveBlogAndTag(blogAndTag);
+        }
+        return blogMapper.update(blog);
+    }
+
+    @Override
+    public int deleteBlog(Long id) {
+        return blogMapper.deleteById(id);
+    }
+
 }

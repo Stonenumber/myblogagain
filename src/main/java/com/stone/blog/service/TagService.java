@@ -1,29 +1,24 @@
 package com.stone.blog.service;
 
 import com.stone.blog.po.Tag;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-
 import java.util.List;
 
 public interface TagService {
 
-    Tag saveTag(Tag tag);
+    int saveTag(Tag tag);
+
+    int deleteTag(Long id);
+
+    int updateTag(Tag tag);
 
     Tag getTag(Long id);
 
     Tag getTagByName(String name);
 
-    Page<Tag> pageList(Pageable pageable);
+    List<Tag> getAllTag();
 
-    List<Tag> listTag();
+    List<Tag> getTagByString(String ids); //根据ids字符串包含一系列tag
 
-    List<Tag> listTag(String ids);
-
-    List<Tag> listTopTag(Integer size);
-
-    Tag updateTag(Long id, Tag type);
-
-    void deleteTag(Long id);
+    List<Tag> getBlogTag(); // tag包含blog
 
 }

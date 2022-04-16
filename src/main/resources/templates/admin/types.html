@@ -11,7 +11,7 @@
   <div class="ui attached pointing menu">
     <div class="ui container">
       <div class="right menu">
-        <a href="#" th:href="@{/admin/types/input}" class="item">新增</a>
+        <a href="#" th:href="@{/admin/types/input}" class="item">Add</a>
         <a href="#" th:href="@{/admin/types}" class="teal active item">列表</a>
       </div>
     </div>
@@ -28,29 +28,29 @@
       <table class="ui celled table">
         <thead>
           <tr>
-            <th></th>
-            <th>名称</th>
-            <th>操作</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Operation</th>
           </tr>
         </thead>
         <tbody>
-          <tr th:each="type,iterStat : ${page.content}">
-            <td th:text="${iterStat.count}">1</td>
+          <tr th:each="type,iterStat : ${page.list}">
+            <td th:text="${type.id}">1</td>
             <td th:text="${type.name}">Name holder</td>
             <td>
-              <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini teal basic button">编辑</a>
-              <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui mini red basic button">删除</a>
+              <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini teal basic button">Edit</a>
+              <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui mini red basic button">Delete</a>
             </td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
             <th colspan="6" >
-              <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
-                <a th:href="@{/admin/types(page=${page.number}-1)}" class=" item" th:unless="${page.first}">上一页</a>
-                <a th:href="@{/admin/types(page=${page.number}+1)}" class=" item" th:unless="${page.last}">下一页</a>
+              <div class="ui mini pagination menu" th:if="${page.total >1}">
+                <a th:href="@{/admin/types(pageNum=${page.hasPreviousPage} ? ${page.prePage} : 1)}" class=" item">Pre</a>
+                <a th:href="@{/admin/types(pageNum=${page.hasNextPage}? ${page.nextPage} : ${page.pageNum})}" class=" item">Next</a>
               </div>
-              <a href="#" th:href="@{/admin/types/input}"  class="ui mini right floated teal basic button">新增</a>
+              <a href="#" th:href="@{/admin/types/input}"  class="ui mini right floated teal basic button">Add</a>
             </th>
           </tr>
         </tfoot>

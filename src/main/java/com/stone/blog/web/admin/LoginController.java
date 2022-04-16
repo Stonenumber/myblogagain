@@ -2,9 +2,7 @@ package com.stone.blog.web.admin;
 
 import com.stone.blog.po.User;
 import com.stone.blog.service.UserService;
-import com.stone.blog.vo.BlogQuery;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,7 +32,7 @@ public class LoginController {
         if(user != null){
             user.setPassword(null); //防止密码展示在页面上
             session.setAttribute("user", user);
-            return "admin/index";
+            return "redirect:/admin/blogs";
         }else{
             attributes.addFlashAttribute("message", "Wrong username or password");
             return "redirect:/admin";

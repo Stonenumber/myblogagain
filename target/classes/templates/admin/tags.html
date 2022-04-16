@@ -11,7 +11,7 @@
   <div class="ui attached pointing menu">
     <div class="ui container">
       <div class="right menu">
-        <a href="#" th:href="@{/admin/tags/input}" class="item">新增</a>
+        <a href="#" th:href="@{/admin/tags/input}" class="item">Add</a>
         <a href="#" th:href="@{/admin/tags}" class="teal active item">列表</a>
       </div>
     </div>
@@ -28,14 +28,14 @@
       <table class="ui compact teal table">
         <thead>
           <tr>
-            <th></th>
+            <th>Id</th>
             <th>Name</th>
             <th>Operation</th>
           </tr>
         </thead>
         <tbody>
-          <tr th:each="tag,iterStat : ${page.content}">
-            <td th:text="${iterStat.count}">1</td>
+          <tr th:each="tag,iterStat : ${page.list}">
+            <td th:text="${tag.id}">1</td>
             <td th:text="${tag.name}">Holder</td>
             <td>
               <a href="#" th:href="@{/admin/tags/{id}/input(id=${tag.id})}" class="ui mini teal basic button">Edit</a>
@@ -46,9 +46,9 @@
         <tfoot>
           <tr>
             <th colspan="6" >
-              <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
-                <a th:href="@{/admin/tags(page=${page.number}-1)}" class=" item" th:unless="${page.first}">Previous</a>
-                <a th:href="@{/admin/tags(page=${page.number}+1)}" class=" item" th:unless="${page.last}">Next</a>
+              <div class="ui mini pagination menu" th:if="${page.total > 1}">
+                <a th:href="@{/admin/tags(pageNum=${page.hasPreviousPage} ? ${page.prePage} : 1)}" class=" item">Pre</a>
+                <a th:href="@{/admin/tags(pageNum=${page.hasNextPage}? ${page.nextPage} : ${page.pageNum})}" class=" item" >Next</a>
               </div>
               <a href="#" th:href="@{/admin/tags/input}"  class="ui mini right floated teal basic button">Add</a>
             </th>

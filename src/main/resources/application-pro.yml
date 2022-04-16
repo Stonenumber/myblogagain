@@ -1,13 +1,10 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://49.232.93.25:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
-    username: root
-    password: rhododendron
-  jpa:
-    hibernate:
-      ddl-auto: none
-    show-sql: true
+    url: jdbc:mysql://47.94.245.107:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: stone
+    password: Liu1995_
+
 logging:
   level:
     root: warn
@@ -15,4 +12,4 @@ logging:
   file:
     name: log/blog-pro.log
 server:
-  port: 8084
+  port: 8080

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="fragments :: head(~{::title})">
-  <title>About me</title>
+  <title>Leave a message for me</title>
 </head>
 <body>
 
@@ -14,11 +14,108 @@
     <div class="ui container">
 
       <div class="ui stackable grid">
+
         <div class="eleven wide column">
-          <div class="ui segment">
-            <img src="../static/images/Autumn.jpg" th:src="@{/images/Autumn.jpg}" alt="" class="ui rounded image" style="width: 600px">
-          </div>
+            <div  class="ui bottom attached segment">
+              <!--展示评论区域列表-->
+              <div id="comment-container" class="ui teal segment">
+                <div th:fragment="messageList">
+                  <div class="ui attached padded segment">
+                    <div class="ui threaded comments" style="max-width: 100%;">
+                      <h3 class="ui dividing header">Messages</h3>
+                      <!--放置评论页码-->
+                      <input type="hidden" name="page" th:value="${pageNum}">
+                      <div th:if="${messagePage} != null">
+                        <!--评论-->
+                        <div class="comment" th:each="mes : ${messagePage.list}">
+                          <!--根评论-->
+                          <a class="avatar">
+                            <img src="https://unsplash.it/100/100?image=416">
+                          </a>
+                          <div class="content">
+                            <a class="author" >
+                              <span th:text="${mes.name}">Matt</span>
+                              <div class="ui mini basic teal  label m-padded-mini" th:if="${mes.admin}">博主</div>
+                            </a>
+                            <div class="metadata">
+                              <span class="date" th:text="${#dates.format(mes.createTime, 'yyyy-MM-dd')}">Today at 5:42PM</span>
+                            </div>
+                            <div class="text" th:text="${mes.content}">
+                              How artistic!
+                            </div>
+
+                            <div class="actions">
+                              <a class="reply" th:attr="data-id=${mes.id}, data-name=${mes.name}" onclick="reply(this)">回复</a>
+                            </div>
+
+                          </div>
+                          <!--子回复-->
+                          <div class="comments" th:if="${#arrays.length(mes.replyMessages)}>0">
+                            <div class="comment" th:each="reply : ${mes.replyMessages}">
+                              <a class="avatar">
+                                <img src="https://unsplash.it/100/100?image=453">
+                              </a>
+
+                              <div class="content">
+                                <a class="author">
+                                  <span th:text="${reply.name}">Name</span>
+                                  <div class="ui mini basic teal  label m-padded-mini" th:if="${reply.admin}">博主</div>
+                                </a>
+                                <div class="metadata">
+                                  <span class="date" th:text="${#dates.format(reply.createTime, 'yyyy-MM-dd')}">Today at 5:42PM</span>
+                                </div>
+                                <div class="text" th:text="${reply.content}">
+                                  How artistic!
+                                </div>
+                                <div class="actions">
+                                  <a class="reply" th:attr= "data-id=${reply.id}, data-name=${reply.name}" onclick="reply(this)">回复</a>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--放置分页条-->
+                  <div class="ui bottom attached segment" th:if="${messagePage} != null and ${messagePage.total}>1" >
+                    <div class="ui middle aligned two column grid" >
+                      <div class="column">
+                        <a onclick="page(this)" th:attr="data-page=${messagePage.hasPreviousPage ? messagePage.prePage : 1}" class="ui mini teal basic button" >pre</a>
+                      </div>
+                      <div class="right aligned column">
+                        <a onclick="page(this)" th:attr="data-page=${messagePage.hasNextPage ? messagePage.nextPage : messagePage.pageNum}" class="ui mini teal basic button" >next</a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <!--评论区域-->
+              <div id="comment-form" class="ui form">
+                <input type="hidden" name="parentMessageId" value="-1"> <!--默认值为-1-->
+                <div class="field">
+                  <textarea name="content" placeholder="Enter your message..."></textarea>
+                </div>
+                <div class="fields">
+                  <div class="field m-mobile-wide m-margin-bottom-small">
+                    <div class="ui input">
+                      <input type="text"  name="name" placeholder="Name" th:value="${session.user} != null ? ${session.user.nickname}" >
+                    </div>
+                  </div>
+                  <div class="field  m-margin-bottom-small m-mobile-wide">
+                    <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide"><i class="edit icon"></i>Submit</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
         </div>
+
         <div class="five wide column">
           <div class="ui top attached segment">
             <div class="ui header">About Me</div>
@@ -28,22 +125,18 @@
             <p class="m-text" th:text="#{about.description}">Holder</p>
           </div>
           <div class="ui attached segment">
-            <div class="ui orange basic label">编程</div>
-            <div class="ui orange basic label">写作</div>
-            <div class="ui orange basic label">文字</div>
-            <div class="ui orange basic label">电影</div>
+            <div class="ui orange basic label">Programmer</div>
           </div>
           <div class="ui attached segment">
-            <div class="ui teal basic label m-margin-tb-tiny">Java</div>
-            <div class="ui teal basic label m-margin-tb-tiny">文学</div>
-            <div class="ui teal basic label m-margin-tb-tiny">写作</div>
-            <div class="ui teal basic label m-margin-tb-tiny">趣事</div>
-            <div class="ui teal basic label m-margin-tb-tiny">图画</div>
+            <div class="ui teal basic label m-margin-tb-tiny">Not programmer, be a Engineer</div>
+
           </div>
           <div class="ui bottom attached segment">
-            <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
-            <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
-            <a href="#" class="ui qq circular icon button" data-content="1" data-position="bottom center"><i class="qq icon"></i></a>
+            <a href="#" th:href="@{https://github.com/Stonenumber}" target="_blank" class="ui circular icon button"><i class="github icon"></i></a>
+            <a href="#" th:href="@{https://leetcode-cn.com/u/condescending-merklefrs/}" target="_blank" class="ui circular icon button">leetcode</i></a>
+            <!--<a href="#"  class="ui wechat circular icon button"><i class="weixin icon"></i></a>-->
+            <a href="#" class="ui qq circular icon button" data-content="liustone2020@gmail.com" data-position="bottom center">email</i></a>
+            <a href="#" class="ui qq circular icon button" data-content="13126775113" data-position="bottom center">call me</i></a>
           </div>
 
           <div class="ui wechat-qr flowing popup transition hidden">
@@ -57,6 +150,20 @@
 
   <br>
   <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <!--底部footer-->
 <footer th:replace="fragments :: footer">
 </footer>
@@ -64,19 +171,140 @@
 <!--/*/<th:block th:replace="fragments :: script">/*/-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+
+<script src="../static/lib/prism/prism.js"></script>
+<script src="../static/lib/tocbot/tocbot.min.js"></script>
+<script src="../static/lib/qrcode/qrcode.min.js"></script>
+<script src="../static/lib/waypoints/jquery.waypoints.min.js"></script>
 <!--/*/</th:block>/*/-->
 
-  <script>
-    $('.menu.toggle').click(function () {
-      $('.m-item').toggleClass('m-mobile-hide');
-    });
 
-    $('.wechat').popup({
-      popup : $('.wechat-qr'),
-      position: 'bottom center'
-    });
-    $('.qq').popup();
+<script th:inline="javascript">
 
-  </script>
+  $('#comment-container').load(/*[[@{/messages}]]*/"/messages");
+
+  $('#commentpost-btn').click(function () {
+    var boo = $('.ui.form').form('validate form');
+    if (boo) {
+      console.log('校验成功');
+      postData();
+    } else {
+      console.log('校验失败');
+    }
+  });
+
+  //评论表单验证
+  $('.ui.form').form({
+    fields: {
+      title: {
+        identifier: 'content',
+        rules: [{
+          type: 'empty',
+          prompt: 'Content can\'t be null'
+        }
+        ]
+      },
+      content: {
+        identifier: 'name',
+        rules: [{
+          type: 'empty',
+          prompt: 'Name can\'t be null'
+        }]
+      }
+    }
+  });
+
+
+  function postData() {
+    $("#comment-container").load(/*[[@{/messages/add}]]*/"/messages/add",{
+      "parentMessageId" : $("[name='parentMessageId']").val(),
+      "name": $("[name='name']").val(),
+      "content" : $("[name='content']").val()
+    },function (responseTxt, statusTxt, xhr) {
+      // $(window).scrollTo($('#comment-container'),500);
+      clearContent();
+    });
+  }
+
+  function clearContent() {
+    $("[name='content']").val('');
+    $("[name='name']").val('');
+    $("[name='parentMessageId']").val(-1);
+    $("[name='content']").attr("placeholder", "请输入留言信息...");
+  }
+
+  function reply(that) {
+    var id = $(that).attr('data-id');
+    var name = $(that).attr('data-name');
+    $("[name='content']").attr("placeholder", "@"+name).focus();
+    $("[name='parentMessageId']").val(id);
+    $(window).scrollTo($('#comment-form'),500);
+  }
+
+
+  function page(that) {
+    //设定分页的页数
+    var p = $(that).attr('data-page');
+    $("#comment-container").load(/*[[@{/messages}]]*/"messages",{
+      pageNum : p//告知分页的页数
+    });
+  }
+
+
+  $('.wechat').popup({
+    popup : $('.wechat-qr'),
+    position: 'bottom center'
+  });
+  $('.qq').popup();
+
+  $('.menu.toggle').click(function () {
+    $('.m-item').toggleClass('m-mobile-hide');
+  });
+
+  tocbot.init({
+    // Where to render the table of contents.
+    tocSelector: '.js-toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: '.js-toc-content',
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: 'h1, h2, h3',
+  });
+
+  $('.toc.button').popup({
+    popup : $('.toc-container.popup'),
+    on : 'click',
+    position: 'left center'
+  });
+
+
+  var serurl = /*[[#{blog.serurl}]]*/"127.0.0.1:8083";
+  var url = /*[[@{/messages}]]*/"";
+  var qrcode = new QRCode("qrcode", {
+    text: serurl+url,
+    width: 110,
+    height: 110,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+  });
+
+  $('#toTop-button').click(function () {
+    $(window).scrollTo(0,500);
+  });
+
+  var waypoint = new Waypoint({
+    element: document.getElementById('waypoint'),
+    handler: function(direction) {
+      if (direction == 'down') {
+        $('#toolbar').show(100);
+      } else {
+        $('#toolbar').hide(500);
+      }
+      console.log('Scrolled to waypoint!  ' + direction);
+    }
+  });
+
+</script>
 </body>
 </html>

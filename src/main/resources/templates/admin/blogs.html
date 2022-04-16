@@ -69,22 +69,22 @@
             <th></th>
             <th>Title</th>
             <th>Type</th>
-            <th>Recommend</th>
             <th>Published</th>
+            <th>Recommend</th>
             <th>Privately</th>
-            <th>Update time</th>
+            <th>Create time</th>
             <th>Operation</th>
           </tr>
           </thead>
           <tbody>
-          <tr th:each = "blog, iterStat : ${page.content}">
+          <tr th:each = "blog, iterStat : ${page.list}">
             <td th:text="${iterStat.count}">1</td>
             <td th:text="${blog.title} != null ? ${blog.title} : 'nothing'">Title holder</td>
             <td th:text="${blog.type} != null ? ${blog.type.name} : 'nothing'">Type holder</td>
-            <td th:text="${blog.recommend ? 'Yes': 'No'}">Recommend holder</td>
             <td th:text="${blog.published ? 'Yes': 'No'}">Published holder</td>
+            <td th:text="${blog.recommend ? 'Yes': 'No'}">Recommend holder</td>
             <td th:text="${blog.privately ? 'Yes': 'No'}">Privately holder</td>
-            <td th:text="${blog.updateTime}">Time holder</td>
+            <td th:text="${blog.createTime}">Time holder</td>
             <td>
               <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">Edit</a>
               <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui mini red basic button">Delete</a>
@@ -95,9 +95,9 @@
           <tr>
             <!-- 合并的列数-->
             <th colspan="8">
-              <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
-                <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">Previous</a>
-                <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="item" th:unless="${page.last}">Next</a>
+              <div class="ui mini pagination menu" >
+                <a onclick="page(this)" th:attr="data-page=${page.hasPreviousPage} ? ${page.prePage} : 1" class="item" >Previous</a>
+                <a onclick="page(this)" th:attr="data-page=${page.hasNextPage}? ${page.nextPage} : ${page.pageNum}" class="item" >Next</a>
               </div>
               <a href="#" th:href="@{/admin/blogs/input}" class="ui mini right floated teal basic button">Add</a>
             </th>
@@ -178,7 +178,7 @@
         title : $("[name='title']").val(),
         typeId : $("[name='typeId']").val(),
         recommend : $("[name='recommend']").prop('checked'),
-        page : $("[name='page']").val() //告知分页的页数
+        pageNum : $("[name='page']").val() //告知分页的页数
       });
     }
 

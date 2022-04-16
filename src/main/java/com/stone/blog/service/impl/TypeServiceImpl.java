@@ -1,15 +1,11 @@
 package com.stone.blog.service.impl;
 
 import com.stone.blog.NotFoundException;
-import com.stone.blog.dao.TypeRepository;
+import com.stone.blog.dao.TypeMapper;
 import com.stone.blog.po.Type;
 import com.stone.blog.service.TypeService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,59 +15,53 @@ import java.util.List;
 public class TypeServiceImpl implements TypeService {
 
     @Autowired
-    private TypeRepository typeRepository;
+    private TypeMapper typeMapper;
 
     //增删改查都用事务Transactional标记
     @Transactional
     @Override
-    public Type saveType(Type type) {
-        return typeRepository.save(type);
+    public int saveType(Type type) {
+        return typeMapper.saveType(type);
     }
 
     @Transactional
     @Override
     public Type getType(Long id) {
-        return typeRepository.getOne(id);
+        return typeMapper.getType(id);
     }
 
     @Transactional
     @Override
-    public Page<Type> listType(Pageable pageable) {
-        return typeRepository.findAll(pageable);
+    public List<Type> listType() {
+        return typeMapper.getAllType();
     }
 
     @Transactional
     @Override
-    public Type updateType(Long id, Type type) {
-        Type t = typeRepository.getOne(id);
+    public int updateType(Long id, Type type) {
+        Type t = typeMapper.getType(id);
         if (t == null){
             throw new NotFoundException("Not exist.");
         }
         BeanUtils.copyProperties(type, t); //把type里的属性复制到t的身上
-        return typeRepository.save(t);
+        return typeMapper.updateType(t);
     }
 
     @Transactional
     @Override
-    public void deleteType(Long id) {
-        typeRepository.deleteById(id);
+    public int deleteType(Long id) {
+        return typeMapper.deleteType(id);
     }
 
     @Override
     public Type getTypeByName(String name) {
-        return typeRepository.findByName(name);
+        return typeMapper.getTypeByName(name);
     }
 
-    @Override
-    public List<Type> listType() {
-        return typeRepository.findAll();
-    }
 
     //展示数量最多的几个分类
     @Override
-    public List<Type> listTypeTop(Integer size) {
-        Sort sort = new Sort(Sort.Direction.DESC, "blogs.size");
-        Pageable pageable = new PageRequest(0, size, sort);
-        return typeRepository.findTop(pageable);
+    public List<Type> getBlogType() {
+        return typeMapper.getBlogType();
     }
 }
