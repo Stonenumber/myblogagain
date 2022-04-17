@@ -23,4 +23,4 @@ logging:
   file:
     name: log/blog-pro.log
 server:
-  port: 8080
+  port: 80
