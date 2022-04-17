@@ -1,4 +1,186 @@
-2022-04-16 23:32:02.442  INFO 5296 --- [main] com.stone.blog.BlogApplication           : Starting BlogApplication using Java 1.8.0_271 on 大方 with PID 5296 (E:\Blog\target\classes started by 18883 in E:\Blog)
-2022-04-16 23:32:02.447 DEBUG 5296 --- [main] com.stone.blog.BlogApplication           : Running with Spring Boot v2.4.0, Spring v5.3.1
-2022-04-16 23:32:02.448  INFO 5296 --- [main] com.stone.blog.BlogApplication           : The following profiles are active: pro
-2022-04-16 23:32:04.708  INFO 5296 --- [main] com.stone.blog.BlogApplication           : Started BlogApplication in 2.892 seconds (JVM running for 3.722)
+2022-04-17 08:53:06.826  INFO 1480 --- [main] com.stone.blog.BlogApplication           : Starting BlogApplication using Java 1.8.0_271 on 大方 with PID 1480 (E:\Blog\target\classes started by 18883 in E:\Blog)
+2022-04-17 08:53:06.839 DEBUG 1480 --- [main] com.stone.blog.BlogApplication           : Running with Spring Boot v2.4.0, Spring v5.3.1
+2022-04-17 08:53:06.840  INFO 1480 --- [main] com.stone.blog.BlogApplication           : The following profiles are active: pro
+2022-04-17 08:53:10.251  INFO 1480 --- [main] com.stone.blog.BlogApplication           : Started BlogApplication in 4.335 seconds (JVM running for 5.895)
+2022-04-17 08:53:22.395  INFO 1480 --- [http-nio-80-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[1, {}, org.apache.catalina.session.StandardSessionFacade@236c2d32]}
+2022-04-17 08:53:23.974 DEBUG 1480 --- [http-nio-80-exec-1] c.s.blog.dao.BlogMapper.getByRecommend   : ==>  Preparing: select id, title from t_blog where recommend = 1 order by update_time desc limit 4;
+2022-04-17 08:53:24.004 DEBUG 1480 --- [http-nio-80-exec-1] c.s.blog.dao.BlogMapper.getByRecommend   : ==> Parameters: 
+2022-04-17 08:53:24.062 DEBUG 1480 --- [http-nio-80-exec-1] c.s.blog.dao.BlogMapper.getByRecommend   : <==      Total: 3
+2022-04-17 08:53:24.078 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.TypeMapper.getBlogType  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id
+2022-04-17 08:53:24.078 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.TypeMapper.getBlogType  : ==> Parameters: 
+2022-04-17 08:53:24.097 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.TypeMapper.getBlogType  : <==      Total: 21
+2022-04-17 08:53:24.100 DEBUG 1480 --- [http-nio-80-exec-1] com.stone.blog.dao.TagMapper.getBlogTag  : ==>  Preparing: select t.id, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tags_id and b.id = bt.blogs_id
+2022-04-17 08:53:24.100 DEBUG 1480 --- [http-nio-80-exec-1] com.stone.blog.dao.TagMapper.getBlogTag  : ==> Parameters: 
+2022-04-17 08:53:24.117 DEBUG 1480 --- [http-nio-80-exec-1] com.stone.blog.dao.TagMapper.getBlogTag  : <==      Total: 21
+2022-04-17 08:53:24.187 DEBUG 1480 --- [http-nio-80-exec-1] c.s.b.dao.BlogMapper.getFrontAll_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.privately = 0
+2022-04-17 08:53:24.188 DEBUG 1480 --- [http-nio-80-exec-1] c.s.b.dao.BlogMapper.getFrontAll_COUNT   : ==> Parameters: 
+2022-04-17 08:53:24.201 DEBUG 1480 --- [http-nio-80-exec-1] c.s.b.dao.BlogMapper.getFrontAll_COUNT   : <==      Total: 1
+2022-04-17 08:53:24.203 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.BlogMapper.getFrontAll  : ==>  Preparing: /*主页博客展示*/ select b.id, b.title, b.first_picture, b.views, b.create_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.privately = 0 order by b.create_time desc LIMIT ?
+2022-04-17 08:53:24.204 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.BlogMapper.getFrontAll  : ==> Parameters: 6(Integer)
+2022-04-17 08:53:24.218 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.BlogMapper.getFrontAll  : <==      Total: 6
+2022-04-17 08:53:24.220  INFO 1480 --- [http-nio-80-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2022-04-17 08:53:24.221  INFO 1480 --- [http-nio-80-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:53:24.733  INFO 1480 --- [http-nio-80-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/;jsessionid=0A7A0318F4CAE8EEB7BA48219AE8D1F2', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[1, {}, org.apache.catalina.session.StandardSessionFacade@236c2d32]}
+2022-04-17 08:53:24.745 DEBUG 1480 --- [http-nio-80-exec-1] c.s.blog.dao.BlogMapper.getByRecommend   : ==>  Preparing: select id, title from t_blog where recommend = 1 order by update_time desc limit 4;
+2022-04-17 08:53:24.746 DEBUG 1480 --- [http-nio-80-exec-1] c.s.blog.dao.BlogMapper.getByRecommend   : ==> Parameters: 
+2022-04-17 08:53:24.758 DEBUG 1480 --- [http-nio-80-exec-1] c.s.blog.dao.BlogMapper.getByRecommend   : <==      Total: 3
+2022-04-17 08:53:24.759 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.TypeMapper.getBlogType  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id
+2022-04-17 08:53:24.759 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.TypeMapper.getBlogType  : ==> Parameters: 
+2022-04-17 08:53:24.774 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.TypeMapper.getBlogType  : <==      Total: 21
+2022-04-17 08:53:24.774 DEBUG 1480 --- [http-nio-80-exec-1] com.stone.blog.dao.TagMapper.getBlogTag  : ==>  Preparing: select t.id, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tags_id and b.id = bt.blogs_id
+2022-04-17 08:53:24.775 DEBUG 1480 --- [http-nio-80-exec-1] com.stone.blog.dao.TagMapper.getBlogTag  : ==> Parameters: 
+2022-04-17 08:53:24.789 DEBUG 1480 --- [http-nio-80-exec-1] com.stone.blog.dao.TagMapper.getBlogTag  : <==      Total: 21
+2022-04-17 08:53:24.792 DEBUG 1480 --- [http-nio-80-exec-1] c.s.b.dao.BlogMapper.getFrontAll_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.privately = 0
+2022-04-17 08:53:24.793 DEBUG 1480 --- [http-nio-80-exec-1] c.s.b.dao.BlogMapper.getFrontAll_COUNT   : ==> Parameters: 
+2022-04-17 08:53:24.806 DEBUG 1480 --- [http-nio-80-exec-1] c.s.b.dao.BlogMapper.getFrontAll_COUNT   : <==      Total: 1
+2022-04-17 08:53:24.807 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.BlogMapper.getFrontAll  : ==>  Preparing: /*主页博客展示*/ select b.id, b.title, b.first_picture, b.views, b.create_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.privately = 0 order by b.create_time desc LIMIT ?
+2022-04-17 08:53:24.807 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.BlogMapper.getFrontAll  : ==> Parameters: 6(Integer)
+2022-04-17 08:53:24.820 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.BlogMapper.getFrontAll  : <==      Total: 6
+2022-04-17 08:53:24.820  INFO 1480 --- [http-nio-80-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2022-04-17 08:53:24.821  INFO 1480 --- [http-nio-80-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:53:25.079  INFO 1480 --- [http-nio-80-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2022-04-17 08:53:25.080 DEBUG 1480 --- [http-nio-80-exec-6] c.s.blog.dao.BlogMapper.topAppreciation  : ==>  Preparing: select id, title from t_blog order by update_time desc limit ?;
+2022-04-17 08:53:25.081 DEBUG 1480 --- [http-nio-80-exec-6] c.s.blog.dao.BlogMapper.topAppreciation  : ==> Parameters: 3(Integer)
+2022-04-17 08:53:25.114 DEBUG 1480 --- [http-nio-80-exec-6] c.s.blog.dao.BlogMapper.topAppreciation  : <==      Total: 3
+2022-04-17 08:53:25.114  INFO 1480 --- [http-nio-80-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2022-04-17 08:53:25.115  INFO 1480 --- [http-nio-80-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:53:55.793  INFO 1480 --- [http-nio-80-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/types/-1;jsessionid=0A7A0318F4CAE8EEB7BA48219AE8D1F2', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[-1, 1, {}]}
+2022-04-17 08:53:55.808 DEBUG 1480 --- [http-nio-80-exec-4] c.stone.blog.dao.TypeMapper.getBlogType  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id
+2022-04-17 08:53:55.808 DEBUG 1480 --- [http-nio-80-exec-4] c.stone.blog.dao.TypeMapper.getBlogType  : ==> Parameters: 
+2022-04-17 08:53:55.825 DEBUG 1480 --- [http-nio-80-exec-4] c.stone.blog.dao.TypeMapper.getBlogType  : <==      Total: 21
+2022-04-17 08:53:55.845 DEBUG 1480 --- [http-nio-80-exec-4] c.s.b.d.BlogMapper.searchAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND b.user_id = u.id AND b.type_id = ? AND b.recommend = ?
+2022-04-17 08:53:55.845 DEBUG 1480 --- [http-nio-80-exec-4] c.s.b.d.BlogMapper.searchAllBlog_COUNT   : ==> Parameters: 56(Long), false(Boolean)
+2022-04-17 08:53:55.856 DEBUG 1480 --- [http-nio-80-exec-4] c.s.b.d.BlogMapper.searchAllBlog_COUNT   : <==      Total: 1
+2022-04-17 08:53:55.856 DEBUG 1480 --- [http-nio-80-exec-4] c.s.blog.dao.BlogMapper.searchAllBlog    : ==>  Preparing: select b.id, b.title, b.create_time, t.name typename, b.recommend, b.published, b.privately, u.avatar, u.nickname from t_blog b ,t_type t, t_user u WHERE b.type_id = t.id and b.user_id = u.id/*博客类型id=类型id*/ and b.type_id = ? /*根据博客类型查询*/ and b.recommend = ? /*根据博客推荐查询*/ LIMIT ?
+2022-04-17 08:53:55.857 DEBUG 1480 --- [http-nio-80-exec-4] c.s.blog.dao.BlogMapper.searchAllBlog    : ==> Parameters: 56(Long), false(Boolean), 5(Integer)
+2022-04-17 08:53:55.872 DEBUG 1480 --- [http-nio-80-exec-4] c.s.blog.dao.BlogMapper.searchAllBlog    : <==      Total: 4
+2022-04-17 08:53:55.872  INFO 1480 --- [http-nio-80-exec-4] com.stone.blog.aspect.LogAspect          : Result: types
+2022-04-17 08:53:55.873  INFO 1480 --- [http-nio-80-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:53:56.193  INFO 1480 --- [http-nio-80-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2022-04-17 08:53:56.194 DEBUG 1480 --- [http-nio-80-exec-9] c.s.blog.dao.BlogMapper.topAppreciation  : ==>  Preparing: select id, title from t_blog order by update_time desc limit ?;
+2022-04-17 08:53:56.194 DEBUG 1480 --- [http-nio-80-exec-9] c.s.blog.dao.BlogMapper.topAppreciation  : ==> Parameters: 3(Integer)
+2022-04-17 08:53:56.207 DEBUG 1480 --- [http-nio-80-exec-9] c.s.blog.dao.BlogMapper.topAppreciation  : <==      Total: 3
+2022-04-17 08:53:56.207  INFO 1480 --- [http-nio-80-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2022-04-17 08:53:56.207  INFO 1480 --- [http-nio-80-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:53:57.304  INFO 1480 --- [http-nio-80-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TagShowController.tags', args=[1, {}, -1]}
+2022-04-17 08:53:57.316 DEBUG 1480 --- [http-nio-80-exec-8] com.stone.blog.dao.TagMapper.getBlogTag  : ==>  Preparing: select t.id, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tags_id and b.id = bt.blogs_id
+2022-04-17 08:53:57.317 DEBUG 1480 --- [http-nio-80-exec-8] com.stone.blog.dao.TagMapper.getBlogTag  : ==> Parameters: 
+2022-04-17 08:53:57.331 DEBUG 1480 --- [http-nio-80-exec-8] com.stone.blog.dao.TagMapper.getBlogTag  : <==      Total: 21
+2022-04-17 08:53:57.339 DEBUG 1480 --- [http-nio-80-exec-8] c.s.b.dao.BlogMapper.getByTagId_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u, t_blog_tags tb, t_tag t1 WHERE b.type_id = t.id AND u.id = b.user_id AND tb.blogs_id = b.id AND tb.tags_id = t1.id AND t1.id = ?
+2022-04-17 08:53:57.339 DEBUG 1480 --- [http-nio-80-exec-8] c.s.b.dao.BlogMapper.getByTagId_COUNT    : ==> Parameters: 66(Long)
+2022-04-17 08:53:57.355 DEBUG 1480 --- [http-nio-80-exec-8] c.s.b.dao.BlogMapper.getByTagId_COUNT    : <==      Total: 1
+2022-04-17 08:53:57.356 DEBUG 1480 --- [http-nio-80-exec-8] c.stone.blog.dao.BlogMapper.getByTagId   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.create_time, b.description, t.name typename, t.id typeid, t1.name tagname, t1.id tagid, u.nickname, u.avatar from t_blog b, t_type t, t_user u, t_blog_tags tb, t_tag t1 where b.type_id = t.id and u.id = b.user_id and tb.blogs_id = b.id and tb.tags_id = t1.id and t1.id = ? order by b.create_time desc LIMIT ?
+2022-04-17 08:53:57.356 DEBUG 1480 --- [http-nio-80-exec-8] c.stone.blog.dao.BlogMapper.getByTagId   : ==> Parameters: 66(Long), 7(Integer)
+2022-04-17 08:53:57.367 DEBUG 1480 --- [http-nio-80-exec-8] c.stone.blog.dao.BlogMapper.getByTagId   : <==      Total: 1
+2022-04-17 08:53:57.368  INFO 1480 --- [http-nio-80-exec-8] com.stone.blog.aspect.LogAspect          : Result: tags
+2022-04-17 08:53:57.368  INFO 1480 --- [http-nio-80-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:53:57.693  INFO 1480 --- [http-nio-80-exec-3] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2022-04-17 08:53:57.694 DEBUG 1480 --- [http-nio-80-exec-3] c.s.blog.dao.BlogMapper.topAppreciation  : ==>  Preparing: select id, title from t_blog order by update_time desc limit ?;
+2022-04-17 08:53:57.694 DEBUG 1480 --- [http-nio-80-exec-3] c.s.blog.dao.BlogMapper.topAppreciation  : ==> Parameters: 3(Integer)
+2022-04-17 08:53:57.704 DEBUG 1480 --- [http-nio-80-exec-3] c.s.blog.dao.BlogMapper.topAppreciation  : <==      Total: 3
+2022-04-17 08:53:57.705  INFO 1480 --- [http-nio-80-exec-3] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2022-04-17 08:53:57.705  INFO 1480 --- [http-nio-80-exec-3] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:53:58.728  INFO 1480 --- [http-nio-80-exec-10] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.ArchiveShowController.archives', args=[{}]}
+2022-04-17 08:53:58.741 DEBUG 1480 --- [http-nio-80-exec-10] c.s.blog.dao.BlogMapper.findGroupYear    : ==>  Preparing: select DATE_FORMAT(b.create_time, '%Y') from t_blog b order by b.create_time asc
+2022-04-17 08:53:58.741 DEBUG 1480 --- [http-nio-80-exec-10] c.s.blog.dao.BlogMapper.findGroupYear    : ==> Parameters: 
+2022-04-17 08:53:58.753 DEBUG 1480 --- [http-nio-80-exec-10] c.s.blog.dao.BlogMapper.findGroupYear    : <==      Total: 21
+2022-04-17 08:53:58.755 DEBUG 1480 --- [http-nio-80-exec-10] c.stone.blog.dao.BlogMapper.findByYear   : ==>  Preparing: select b.title, b.create_time, b.id, b.flag from t_blog b where DATE_FORMAT(b.create_time, "%Y") = ?
+2022-04-17 08:53:58.755 DEBUG 1480 --- [http-nio-80-exec-10] c.stone.blog.dao.BlogMapper.findByYear   : ==> Parameters: 2022(String)
+2022-04-17 08:53:58.765 DEBUG 1480 --- [http-nio-80-exec-10] c.stone.blog.dao.BlogMapper.findByYear   : <==      Total: 1
+2022-04-17 08:53:58.766 DEBUG 1480 --- [http-nio-80-exec-10] c.stone.blog.dao.BlogMapper.findByYear   : ==>  Preparing: select b.title, b.create_time, b.id, b.flag from t_blog b where DATE_FORMAT(b.create_time, "%Y") = ?
+2022-04-17 08:53:58.766 DEBUG 1480 --- [http-nio-80-exec-10] c.stone.blog.dao.BlogMapper.findByYear   : ==> Parameters: 2021(String)
+2022-04-17 08:53:58.777 DEBUG 1480 --- [http-nio-80-exec-10] c.stone.blog.dao.BlogMapper.findByYear   : <==      Total: 2
+2022-04-17 08:53:58.777 DEBUG 1480 --- [http-nio-80-exec-10] c.stone.blog.dao.BlogMapper.findByYear   : ==>  Preparing: select b.title, b.create_time, b.id, b.flag from t_blog b where DATE_FORMAT(b.create_time, "%Y") = ?
+2022-04-17 08:53:58.777 DEBUG 1480 --- [http-nio-80-exec-10] c.stone.blog.dao.BlogMapper.findByYear   : ==> Parameters: 2020(String)
+2022-04-17 08:53:58.793 DEBUG 1480 --- [http-nio-80-exec-10] c.stone.blog.dao.BlogMapper.findByYear   : <==      Total: 18
+2022-04-17 08:53:58.793 DEBUG 1480 --- [http-nio-80-exec-10] c.stone.blog.dao.BlogMapper.getBackAll   : ==>  Preparing: /*后台展示所有blog*/ select b.id, b.title, t.name typename, b.create_time, b.recommend, b.published, b.privately from t_blog b, t_type t where b.type_id = t.id order by b.create_time desc /*博客类型id=类型id*/
+2022-04-17 08:53:58.794 DEBUG 1480 --- [http-nio-80-exec-10] c.stone.blog.dao.BlogMapper.getBackAll   : ==> Parameters: 
+2022-04-17 08:53:58.810 DEBUG 1480 --- [http-nio-80-exec-10] c.stone.blog.dao.BlogMapper.getBackAll   : <==      Total: 21
+2022-04-17 08:53:58.810  INFO 1480 --- [http-nio-80-exec-10] com.stone.blog.aspect.LogAspect          : Result: archives
+2022-04-17 08:53:58.810  INFO 1480 --- [http-nio-80-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:53:59.112  INFO 1480 --- [http-nio-80-exec-5] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2022-04-17 08:53:59.113 DEBUG 1480 --- [http-nio-80-exec-5] c.s.blog.dao.BlogMapper.topAppreciation  : ==>  Preparing: select id, title from t_blog order by update_time desc limit ?;
+2022-04-17 08:53:59.113 DEBUG 1480 --- [http-nio-80-exec-5] c.s.blog.dao.BlogMapper.topAppreciation  : ==> Parameters: 3(Integer)
+2022-04-17 08:53:59.123 DEBUG 1480 --- [http-nio-80-exec-5] c.s.blog.dao.BlogMapper.topAppreciation  : <==      Total: 3
+2022-04-17 08:53:59.123  INFO 1480 --- [http-nio-80-exec-5] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2022-04-17 08:53:59.123  INFO 1480 --- [http-nio-80-exec-5] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:54:00.548  INFO 1480 --- [http-nio-80-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[1, {}, org.apache.catalina.session.StandardSessionFacade@236c2d32]}
+2022-04-17 08:54:00.557 DEBUG 1480 --- [http-nio-80-exec-1] c.s.blog.dao.BlogMapper.getByRecommend   : ==>  Preparing: select id, title from t_blog where recommend = 1 order by update_time desc limit 4;
+2022-04-17 08:54:00.558 DEBUG 1480 --- [http-nio-80-exec-1] c.s.blog.dao.BlogMapper.getByRecommend   : ==> Parameters: 
+2022-04-17 08:54:00.568 DEBUG 1480 --- [http-nio-80-exec-1] c.s.blog.dao.BlogMapper.getByRecommend   : <==      Total: 3
+2022-04-17 08:54:00.568 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.TypeMapper.getBlogType  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id
+2022-04-17 08:54:00.569 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.TypeMapper.getBlogType  : ==> Parameters: 
+2022-04-17 08:54:00.581 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.TypeMapper.getBlogType  : <==      Total: 21
+2022-04-17 08:54:00.582 DEBUG 1480 --- [http-nio-80-exec-1] com.stone.blog.dao.TagMapper.getBlogTag  : ==>  Preparing: select t.id, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tags_id and b.id = bt.blogs_id
+2022-04-17 08:54:00.582 DEBUG 1480 --- [http-nio-80-exec-1] com.stone.blog.dao.TagMapper.getBlogTag  : ==> Parameters: 
+2022-04-17 08:54:00.593 DEBUG 1480 --- [http-nio-80-exec-1] com.stone.blog.dao.TagMapper.getBlogTag  : <==      Total: 21
+2022-04-17 08:54:00.596 DEBUG 1480 --- [http-nio-80-exec-1] c.s.b.dao.BlogMapper.getFrontAll_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.privately = 0
+2022-04-17 08:54:00.596 DEBUG 1480 --- [http-nio-80-exec-1] c.s.b.dao.BlogMapper.getFrontAll_COUNT   : ==> Parameters: 
+2022-04-17 08:54:00.608 DEBUG 1480 --- [http-nio-80-exec-1] c.s.b.dao.BlogMapper.getFrontAll_COUNT   : <==      Total: 1
+2022-04-17 08:54:00.608 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.BlogMapper.getFrontAll  : ==>  Preparing: /*主页博客展示*/ select b.id, b.title, b.first_picture, b.views, b.create_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.privately = 0 order by b.create_time desc LIMIT ?
+2022-04-17 08:54:00.609 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.BlogMapper.getFrontAll  : ==> Parameters: 6(Integer)
+2022-04-17 08:54:00.622 DEBUG 1480 --- [http-nio-80-exec-1] c.stone.blog.dao.BlogMapper.getFrontAll  : <==      Total: 6
+2022-04-17 08:54:00.622  INFO 1480 --- [http-nio-80-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2022-04-17 08:54:00.622  INFO 1480 --- [http-nio-80-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:54:00.908  INFO 1480 --- [http-nio-80-exec-6] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2022-04-17 08:54:00.909 DEBUG 1480 --- [http-nio-80-exec-6] c.s.blog.dao.BlogMapper.topAppreciation  : ==>  Preparing: select id, title from t_blog order by update_time desc limit ?;
+2022-04-17 08:54:00.909 DEBUG 1480 --- [http-nio-80-exec-6] c.s.blog.dao.BlogMapper.topAppreciation  : ==> Parameters: 3(Integer)
+2022-04-17 08:54:00.920 DEBUG 1480 --- [http-nio-80-exec-6] c.s.blog.dao.BlogMapper.topAppreciation  : <==      Total: 3
+2022-04-17 08:54:00.921  INFO 1480 --- [http-nio-80-exec-6] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2022-04-17 08:54:00.921  INFO 1480 --- [http-nio-80-exec-6] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:54:01.964  INFO 1480 --- [http-nio-80-exec-7] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[-1, 1, {}]}
+2022-04-17 08:54:01.974 DEBUG 1480 --- [http-nio-80-exec-7] c.stone.blog.dao.TypeMapper.getBlogType  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id
+2022-04-17 08:54:01.974 DEBUG 1480 --- [http-nio-80-exec-7] c.stone.blog.dao.TypeMapper.getBlogType  : ==> Parameters: 
+2022-04-17 08:54:01.985 DEBUG 1480 --- [http-nio-80-exec-7] c.stone.blog.dao.TypeMapper.getBlogType  : <==      Total: 21
+2022-04-17 08:54:01.987 DEBUG 1480 --- [http-nio-80-exec-7] c.s.b.d.BlogMapper.searchAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND b.user_id = u.id AND b.type_id = ? AND b.recommend = ?
+2022-04-17 08:54:01.987 DEBUG 1480 --- [http-nio-80-exec-7] c.s.b.d.BlogMapper.searchAllBlog_COUNT   : ==> Parameters: 56(Long), false(Boolean)
+2022-04-17 08:54:01.998 DEBUG 1480 --- [http-nio-80-exec-7] c.s.b.d.BlogMapper.searchAllBlog_COUNT   : <==      Total: 1
+2022-04-17 08:54:01.999 DEBUG 1480 --- [http-nio-80-exec-7] c.s.blog.dao.BlogMapper.searchAllBlog    : ==>  Preparing: select b.id, b.title, b.create_time, t.name typename, b.recommend, b.published, b.privately, u.avatar, u.nickname from t_blog b ,t_type t, t_user u WHERE b.type_id = t.id and b.user_id = u.id/*博客类型id=类型id*/ and b.type_id = ? /*根据博客类型查询*/ and b.recommend = ? /*根据博客推荐查询*/ LIMIT ?
+2022-04-17 08:54:01.999 DEBUG 1480 --- [http-nio-80-exec-7] c.s.blog.dao.BlogMapper.searchAllBlog    : ==> Parameters: 56(Long), false(Boolean), 5(Integer)
+2022-04-17 08:54:02.011 DEBUG 1480 --- [http-nio-80-exec-7] c.s.blog.dao.BlogMapper.searchAllBlog    : <==      Total: 4
+2022-04-17 08:54:02.011  INFO 1480 --- [http-nio-80-exec-7] com.stone.blog.aspect.LogAspect          : Result: types
+2022-04-17 08:54:02.011  INFO 1480 --- [http-nio-80-exec-7] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:54:02.375  INFO 1480 --- [http-nio-80-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2022-04-17 08:54:02.376 DEBUG 1480 --- [http-nio-80-exec-2] c.s.blog.dao.BlogMapper.topAppreciation  : ==>  Preparing: select id, title from t_blog order by update_time desc limit ?;
+2022-04-17 08:54:02.376 DEBUG 1480 --- [http-nio-80-exec-2] c.s.blog.dao.BlogMapper.topAppreciation  : ==> Parameters: 3(Integer)
+2022-04-17 08:54:02.386 DEBUG 1480 --- [http-nio-80-exec-2] c.s.blog.dao.BlogMapper.topAppreciation  : <==      Total: 3
+2022-04-17 08:54:02.387  INFO 1480 --- [http-nio-80-exec-2] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2022-04-17 08:54:02.387  INFO 1480 --- [http-nio-80-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:54:04.529  INFO 1480 --- [http-nio-80-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/blog/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.blog', args=[255, {}]}
+2022-04-17 08:54:04.541 DEBUG 1480 --- [http-nio-80-exec-4] c.stone.blog.dao.BlogMapper.updateViews  : ==>  Preparing: update t_blog set views = views + 1 where id = ?;
+2022-04-17 08:54:04.541 DEBUG 1480 --- [http-nio-80-exec-4] c.stone.blog.dao.BlogMapper.updateViews  : ==> Parameters: 255(Long)
+2022-04-17 08:54:04.587 DEBUG 1480 --- [http-nio-80-exec-4] c.s.blog.dao.BlogMapper.getFrontBlog     : ==>  Preparing: /*博客详情*/ select b.id, b.first_picture, b.flag, b.title, b.content, b.views, b.create_time,b.commentable, b.share_statement, b.appreciation, u.nickname, u.avatar, tag.id tagid, tag.name tagname from t_blog b, t_user u, t_tag tag, t_blog_tags tb where b.id = ? and u.id = b.user_id and tb.blogs_id = b.id and tag.id = tb.tags_id
+2022-04-17 08:54:04.588 DEBUG 1480 --- [http-nio-80-exec-4] c.s.blog.dao.BlogMapper.getFrontBlog     : ==> Parameters: 255(Long)
+2022-04-17 08:54:04.632 DEBUG 1480 --- [http-nio-80-exec-4] c.s.blog.dao.BlogMapper.getFrontBlog     : <==      Total: 1
+2022-04-17 08:54:04.818  INFO 1480 --- [http-nio-80-exec-4] com.stone.blog.aspect.LogAspect          : Result: blog
+2022-04-17 08:54:04.818  INFO 1480 --- [http-nio-80-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:54:05.119  INFO 1480 --- [http-nio-80-exec-9] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2022-04-17 08:54:05.120 DEBUG 1480 --- [http-nio-80-exec-9] c.s.blog.dao.BlogMapper.topAppreciation  : ==>  Preparing: select id, title from t_blog order by update_time desc limit ?;
+2022-04-17 08:54:05.120 DEBUG 1480 --- [http-nio-80-exec-9] c.s.blog.dao.BlogMapper.topAppreciation  : ==> Parameters: 3(Integer)
+2022-04-17 08:54:05.122  INFO 1480 --- [http-nio-80-exec-8] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/comments/255', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.CommentShowController.comments', args=[1, 255, {}]}
+2022-04-17 08:54:05.141 DEBUG 1480 --- [http-nio-80-exec-9] c.s.blog.dao.BlogMapper.topAppreciation  : <==      Total: 3
+2022-04-17 08:54:05.142  INFO 1480 --- [http-nio-80-exec-9] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2022-04-17 08:54:05.142  INFO 1480 --- [http-nio-80-exec-9] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:54:05.150 DEBUG 1480 --- [http-nio-80-exec-8] c.s.b.d.C.findByBlogId_COUNT             : ==>  Preparing: SELECT count(0) FROM t_comment WHERE blog_id = ? AND parent_comment_id = -1
+2022-04-17 08:54:05.150 DEBUG 1480 --- [http-nio-80-exec-8] c.s.b.d.C.findByBlogId_COUNT             : ==> Parameters: 255(Long)
+2022-04-17 08:54:05.165 DEBUG 1480 --- [http-nio-80-exec-8] c.s.b.d.C.findByBlogId_COUNT             : <==      Total: 1
+2022-04-17 08:54:05.167  INFO 1480 --- [http-nio-80-exec-8] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
+2022-04-17 08:54:05.167  INFO 1480 --- [http-nio-80-exec-8] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:58:47.218  INFO 1480 --- [http-nio-80-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/types/215', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.TypeShowController.types', args=[215, 1, {}]}
+2022-04-17 08:58:47.231 DEBUG 1480 --- [http-nio-80-exec-2] c.stone.blog.dao.TypeMapper.getBlogType  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id
+2022-04-17 08:58:47.232 DEBUG 1480 --- [http-nio-80-exec-2] c.stone.blog.dao.TypeMapper.getBlogType  : ==> Parameters: 
+2022-04-17 08:58:47.246 DEBUG 1480 --- [http-nio-80-exec-2] c.stone.blog.dao.TypeMapper.getBlogType  : <==      Total: 21
+2022-04-17 08:58:47.249 DEBUG 1480 --- [http-nio-80-exec-2] c.s.b.d.BlogMapper.searchAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND b.user_id = u.id AND b.type_id = ? AND b.recommend = ?
+2022-04-17 08:58:47.249 DEBUG 1480 --- [http-nio-80-exec-2] c.s.b.d.BlogMapper.searchAllBlog_COUNT   : ==> Parameters: 215(Long), false(Boolean)
+2022-04-17 08:58:47.266 DEBUG 1480 --- [http-nio-80-exec-2] c.s.b.d.BlogMapper.searchAllBlog_COUNT   : <==      Total: 1
+2022-04-17 08:58:47.267 DEBUG 1480 --- [http-nio-80-exec-2] c.s.blog.dao.BlogMapper.searchAllBlog    : ==>  Preparing: select b.id, b.title, b.create_time, t.name typename, b.recommend, b.published, b.privately, u.avatar, u.nickname from t_blog b ,t_type t, t_user u WHERE b.type_id = t.id and b.user_id = u.id/*博客类型id=类型id*/ and b.type_id = ? /*根据博客类型查询*/ and b.recommend = ? /*根据博客推荐查询*/ LIMIT ?
+2022-04-17 08:58:47.267 DEBUG 1480 --- [http-nio-80-exec-2] c.s.blog.dao.BlogMapper.searchAllBlog    : ==> Parameters: 215(Long), false(Boolean), 5(Integer)
+2022-04-17 08:58:47.279 DEBUG 1480 --- [http-nio-80-exec-2] c.s.blog.dao.BlogMapper.searchAllBlog    : <==      Total: 4
+2022-04-17 08:58:47.280  INFO 1480 --- [http-nio-80-exec-2] com.stone.blog.aspect.LogAspect          : Result: types
+2022-04-17 08:58:47.280  INFO 1480 --- [http-nio-80-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-17 08:58:47.594  INFO 1480 --- [http-nio-80-exec-4] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2022-04-17 08:58:47.594 DEBUG 1480 --- [http-nio-80-exec-4] c.s.blog.dao.BlogMapper.topAppreciation  : ==>  Preparing: select id, title from t_blog order by update_time desc limit ?;
+2022-04-17 08:58:47.594 DEBUG 1480 --- [http-nio-80-exec-4] c.s.blog.dao.BlogMapper.topAppreciation  : ==> Parameters: 3(Integer)
+2022-04-17 08:58:47.607 DEBUG 1480 --- [http-nio-80-exec-4] c.s.blog.dao.BlogMapper.topAppreciation  : <==      Total: 3
+2022-04-17 08:58:47.610  INFO 1480 --- [http-nio-80-exec-4] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2022-04-17 08:58:47.611  INFO 1480 --- [http-nio-80-exec-4] com.stone.blog.aspect.LogAspect          : ------After-------

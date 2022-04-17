@@ -2207,3 +2207,44 @@
 2022-04-16 23:34:30.650 DEBUG 14184 --- [http-nio-8083-exec-10] c.s.b.d.C.findByBlogId_COUNT             : <==      Total: 1
 2022-04-16 23:34:30.651  INFO 14184 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : Result: blog :: commentList
 2022-04-16 23:34:30.651  INFO 14184 --- [http-nio-8083-exec-10] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-16 23:45:28.101  INFO 14312 --- [main] com.stone.blog.BlogApplication           : Starting BlogApplication using Java 1.8.0_271 on 大方 with PID 14312 (E:\Blog\target\classes started by 18883 in E:\Blog)
+2022-04-16 23:45:28.104 DEBUG 14312 --- [main] com.stone.blog.BlogApplication           : Running with Spring Boot v2.4.0, Spring v5.3.1
+2022-04-16 23:45:28.104  INFO 14312 --- [main] com.stone.blog.BlogApplication           : The following profiles are active: dev
+2022-04-16 23:45:29.110  INFO 14312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-04-16 23:45:29.116  INFO 14312 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 23:45:29.117  INFO 14312 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-04-16 23:45:29.181  INFO 14312 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 23:45:29.182  INFO 14312 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1035 ms
+2022-04-16 23:45:29.711  INFO 14312 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-16 23:45:29.792  INFO 14312 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-04-16 23:45:30.035  INFO 14312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2022-04-16 23:45:30.043  INFO 14312 --- [main] com.stone.blog.BlogApplication           : Started BlogApplication in 2.379 seconds (JVM running for 2.983)
+2022-04-16 23:45:36.647  INFO 14312 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-16 23:45:36.647  INFO 14312 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-16 23:45:36.648  INFO 14312 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-16 23:45:36.676  INFO 14312 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.index', args=[1, {}, org.apache.catalina.session.StandardSessionFacade@3c04706b]}
+2022-04-16 23:45:36.695  INFO 14312 --- [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-16 23:45:37.110  INFO 14312 --- [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-16 23:45:37.117 DEBUG 14312 --- [http-nio-8083-exec-1] c.s.blog.dao.BlogMapper.getByRecommend   : ==>  Preparing: select id, title from t_blog where recommend = 1 order by update_time desc limit 4;
+2022-04-16 23:45:37.136 DEBUG 14312 --- [http-nio-8083-exec-1] c.s.blog.dao.BlogMapper.getByRecommend   : ==> Parameters: 
+2022-04-16 23:45:37.155 DEBUG 14312 --- [http-nio-8083-exec-1] c.s.blog.dao.BlogMapper.getByRecommend   : <==      Total: 4
+2022-04-16 23:45:37.163 DEBUG 14312 --- [http-nio-8083-exec-1] c.stone.blog.dao.TypeMapper.getBlogType  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id
+2022-04-16 23:45:37.163 DEBUG 14312 --- [http-nio-8083-exec-1] c.stone.blog.dao.TypeMapper.getBlogType  : ==> Parameters: 
+2022-04-16 23:45:37.170 DEBUG 14312 --- [http-nio-8083-exec-1] c.stone.blog.dao.TypeMapper.getBlogType  : <==      Total: 21
+2022-04-16 23:45:37.173 DEBUG 14312 --- [http-nio-8083-exec-1] com.stone.blog.dao.TagMapper.getBlogTag  : ==>  Preparing: select t.id, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tags_id and b.id = bt.blogs_id
+2022-04-16 23:45:37.173 DEBUG 14312 --- [http-nio-8083-exec-1] com.stone.blog.dao.TagMapper.getBlogTag  : ==> Parameters: 
+2022-04-16 23:45:37.178 DEBUG 14312 --- [http-nio-8083-exec-1] com.stone.blog.dao.TagMapper.getBlogTag  : <==      Total: 21
+2022-04-16 23:45:37.211 DEBUG 14312 --- [http-nio-8083-exec-1] c.s.b.dao.BlogMapper.getFrontAll_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.privately = 0
+2022-04-16 23:45:37.211 DEBUG 14312 --- [http-nio-8083-exec-1] c.s.b.dao.BlogMapper.getFrontAll_COUNT   : ==> Parameters: 
+2022-04-16 23:45:37.214 DEBUG 14312 --- [http-nio-8083-exec-1] c.s.b.dao.BlogMapper.getFrontAll_COUNT   : <==      Total: 1
+2022-04-16 23:45:37.215 DEBUG 14312 --- [http-nio-8083-exec-1] c.stone.blog.dao.BlogMapper.getFrontAll  : ==>  Preparing: /*主页博客展示*/ select b.id, b.title, b.first_picture, b.views, b.create_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.privately = 0 order by b.create_time desc LIMIT ?
+2022-04-16 23:45:37.216 DEBUG 14312 --- [http-nio-8083-exec-1] c.stone.blog.dao.BlogMapper.getFrontAll  : ==> Parameters: 6(Integer)
+2022-04-16 23:45:37.220 DEBUG 14312 --- [http-nio-8083-exec-1] c.stone.blog.dao.BlogMapper.getFrontAll  : <==      Total: 6
+2022-04-16 23:45:37.221  INFO 14312 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : Result: index
+2022-04-16 23:45:37.222  INFO 14312 --- [http-nio-8083-exec-1] com.stone.blog.aspect.LogAspect          : ------After-------
+2022-04-16 23:45:38.113  INFO 14312 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Request: RequestLog{url='http://localhost:8083/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.stone.blog.web.IndexController.newBlogs', args=[{}]}
+2022-04-16 23:45:38.116 DEBUG 14312 --- [http-nio-8083-exec-2] c.s.blog.dao.BlogMapper.topAppreciation  : ==>  Preparing: select id, title from t_blog order by update_time desc limit ?;
+2022-04-16 23:45:38.117 DEBUG 14312 --- [http-nio-8083-exec-2] c.s.blog.dao.BlogMapper.topAppreciation  : ==> Parameters: 3(Integer)
+2022-04-16 23:45:38.119 DEBUG 14312 --- [http-nio-8083-exec-2] c.s.blog.dao.BlogMapper.topAppreciation  : <==      Total: 3
+2022-04-16 23:45:38.119  INFO 14312 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : Result: fragments :: newBlogList
+2022-04-16 23:45:38.119  INFO 14312 --- [http-nio-8083-exec-2] com.stone.blog.aspect.LogAspect          : ------After-------
